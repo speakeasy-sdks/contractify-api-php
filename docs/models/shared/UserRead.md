@@ -1,0 +1,12 @@
+# UserRead
+
+
+## Fields
+
+| Field                                                         | Type                                                          | Required                                                      | Description                                                   | Example                                                       |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `createdAt`                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |                                                               |
+| `email`                                                       | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           | john@example.org                                              |
+| `id`                                                          | *?int*                                                        | :heavy_minus_sign:                                            | N/A                                                           | 1                                                             |
+| `name`                                                        | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           | John Doe                                                      |
+| `role`                                                        | [?UserReadRole](../../models/shared/UserReadRole.md)          | :heavy_minus_sign:                                            | N/A                                                           | admin                                                         |
