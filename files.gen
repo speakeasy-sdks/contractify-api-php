@@ -12,7 +12,6 @@ src/Tasks.php
 src/Users.php
 src/ContractifyProduction.php
 src/ContractifyProductionBuilder.php
-.gitignore
 composer.json
 phpstan.neon
 src/Utils/EnumHandler.php
