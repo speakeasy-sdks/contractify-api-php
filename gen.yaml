@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 35b77c8e231012e142d527cdb5536b80
   docVersion: "2022-08-16"
-  speakeasyVersion: 1.49.0
-  generationVersion: 2.41.4
+  speakeasyVersion: 1.51.1
+  generationVersion: 2.50.2
 generation:
   comments:
     disableComments: false
@@ -13,7 +13,7 @@ generation:
   singleTagPerOp: false
   tagNamespacingDisabled: false
 php:
-  version: 1.1.0
+  version: 1.2.0
   maxMethodParams: 0
   namespace: Contractify\ContractifyAPI
   packageName: contractify/contractify-api-php
