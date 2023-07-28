@@ -41,7 +41,7 @@ class Offices
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "officeWrite", "json");
         $options = array_merge_recursive($options, $body);
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0.8, application/json;q=0.5, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
@@ -100,7 +100,7 @@ class Offices
         $url = Utils\Utils::generateUrl($baseUrl, '/api/companies/{company}/offices/{office}', \Contractify\ContractifyAPI\Models\Operations\DeleteOfficeRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0.8, application/json;q=0.5, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
@@ -161,7 +161,7 @@ class Offices
         $url = Utils\Utils::generateUrl($baseUrl, '/api/companies/{company}/offices/{office}', \Contractify\ContractifyAPI\Models\Operations\GetOfficeRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0.8, application/json;q=0.5, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
@@ -220,7 +220,7 @@ class Offices
         $url = Utils\Utils::generateUrl($baseUrl, '/api/companies/{company}/offices', \Contractify\ContractifyAPI\Models\Operations\ListOfficesRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
@@ -275,7 +275,7 @@ class Offices
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "officeWrite", "json");
         $options = array_merge_recursive($options, $body);
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0.8, application/json;q=0.6, application/json;q=0.4, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);

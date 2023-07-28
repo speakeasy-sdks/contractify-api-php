@@ -41,7 +41,7 @@ class Tasks
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "taskWrite", "json");
         $options = array_merge_recursive($options, $body);
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0.8, application/json;q=0.5, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
@@ -100,7 +100,7 @@ class Tasks
         $url = Utils\Utils::generateUrl($baseUrl, '/api/companies/{company}/tasks/{task}', \Contractify\ContractifyAPI\Models\Operations\DeleteTaskRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
@@ -155,7 +155,7 @@ class Tasks
         $url = Utils\Utils::generateUrl($baseUrl, '/api/companies/{company}/tasks/{task}', \Contractify\ContractifyAPI\Models\Operations\GetTaskRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0.8, application/json;q=0.5, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
@@ -215,7 +215,7 @@ class Tasks
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\Contractify\ContractifyAPI\Models\Operations\ListTasksRequest::class, $request, null));
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
@@ -270,7 +270,7 @@ class Tasks
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "taskUpdate", "json");
         $options = array_merge_recursive($options, $body);
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0.8, application/json;q=0.6, application/json;q=0.4, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
