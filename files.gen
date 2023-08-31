@@ -615,3 +615,4 @@ docs/models/shared/CompanyRead.md
 docs/models/shared/UserCollection.md
 docs/models/shared/UserReadRole.md
 docs/models/shared/UserRead.md
+.gitattributes
