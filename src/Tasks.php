@@ -31,7 +31,7 @@ class Tasks
      * @return \Contractify\ContractifyAPI\Models\Operations\CreateTaskResponse
      */
 	public function createTask(
-        \Contractify\ContractifyAPI\Models\Operations\CreateTaskRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\CreateTaskRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\CreateTaskSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\CreateTaskResponse
     {
@@ -40,7 +40,9 @@ class Tasks
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "taskWrite", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -92,7 +94,7 @@ class Tasks
      * @return \Contractify\ContractifyAPI\Models\Operations\DeleteTaskResponse
      */
 	public function deleteTask(
-        \Contractify\ContractifyAPI\Models\Operations\DeleteTaskRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\DeleteTaskRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\DeleteTaskSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\DeleteTaskResponse
     {
@@ -147,7 +149,7 @@ class Tasks
      * @return \Contractify\ContractifyAPI\Models\Operations\GetTaskResponse
      */
 	public function getTask(
-        \Contractify\ContractifyAPI\Models\Operations\GetTaskRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\GetTaskRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\GetTaskSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\GetTaskResponse
     {
@@ -206,7 +208,7 @@ class Tasks
      * @return \Contractify\ContractifyAPI\Models\Operations\ListTasksResponse
      */
 	public function listTasks(
-        \Contractify\ContractifyAPI\Models\Operations\ListTasksRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\ListTasksRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\ListTasksSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListTasksResponse
     {
@@ -260,7 +262,7 @@ class Tasks
      * @return \Contractify\ContractifyAPI\Models\Operations\UpdateTaskResponse
      */
 	public function updateTask(
-        \Contractify\ContractifyAPI\Models\Operations\UpdateTaskRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\UpdateTaskRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\UpdateTaskSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\UpdateTaskResponse
     {
@@ -269,7 +271,9 @@ class Tasks
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "taskUpdate", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         

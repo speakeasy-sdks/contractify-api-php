@@ -31,7 +31,7 @@ class Contracts
      * @return \Contractify\ContractifyAPI\Models\Operations\CreateContractResponse
      */
 	public function createContract(
-        \Contractify\ContractifyAPI\Models\Operations\CreateContractRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\CreateContractRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\CreateContractSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\CreateContractResponse
     {
@@ -40,7 +40,9 @@ class Contracts
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "contractWrite", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -92,7 +94,7 @@ class Contracts
      * @return \Contractify\ContractifyAPI\Models\Operations\DeleteContractResponse
      */
 	public function deleteContract(
-        \Contractify\ContractifyAPI\Models\Operations\DeleteContractRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\DeleteContractRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\DeleteContractSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\DeleteContractResponse
     {
@@ -153,7 +155,7 @@ class Contracts
      * @return \Contractify\ContractifyAPI\Models\Operations\GetContractResponse
      */
 	public function getContract(
-        \Contractify\ContractifyAPI\Models\Operations\GetContractRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\GetContractRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\GetContractSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\GetContractResponse
     {
@@ -212,7 +214,7 @@ class Contracts
      * @return \Contractify\ContractifyAPI\Models\Operations\ListContractsResponse
      */
 	public function listContracts(
-        \Contractify\ContractifyAPI\Models\Operations\ListContractsRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\ListContractsRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\ListContractsSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListContractsResponse
     {
@@ -266,7 +268,7 @@ class Contracts
      * @return \Contractify\ContractifyAPI\Models\Operations\UpdateContractResponse
      */
 	public function updateContract(
-        \Contractify\ContractifyAPI\Models\Operations\UpdateContractRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\UpdateContractRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\UpdateContractSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\UpdateContractResponse
     {
@@ -275,7 +277,9 @@ class Contracts
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "contractWrite", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         

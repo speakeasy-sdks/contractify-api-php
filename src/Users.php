@@ -82,7 +82,7 @@ class Users
      * @return \Contractify\ContractifyAPI\Models\Operations\ListUsersResponse
      */
 	public function listUsers(
-        \Contractify\ContractifyAPI\Models\Operations\ListUsersRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\ListUsersRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\ListUsersSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListUsersResponse
     {

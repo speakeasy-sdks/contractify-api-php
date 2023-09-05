@@ -31,7 +31,7 @@ class Documents
      * @return \Contractify\ContractifyAPI\Models\Operations\DeleteDocumentResponse
      */
 	public function deleteDocument(
-        \Contractify\ContractifyAPI\Models\Operations\DeleteDocumentRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\DeleteDocumentRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\DeleteDocumentSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\DeleteDocumentResponse
     {
@@ -92,7 +92,7 @@ class Documents
      * @return \Contractify\ContractifyAPI\Models\Operations\GetDocumentResponse
      */
 	public function getDocument(
-        \Contractify\ContractifyAPI\Models\Operations\GetDocumentRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\GetDocumentRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\GetDocumentSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\GetDocumentResponse
     {
@@ -151,7 +151,7 @@ class Documents
      * @return \Contractify\ContractifyAPI\Models\Operations\ListDocumentsResponse
      */
 	public function listDocuments(
-        \Contractify\ContractifyAPI\Models\Operations\ListDocumentsRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\ListDocumentsRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\ListDocumentsSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListDocumentsResponse
     {
@@ -205,7 +205,7 @@ class Documents
      * @return \Contractify\ContractifyAPI\Models\Operations\UpdateDocumentResponse
      */
 	public function updateDocument(
-        \Contractify\ContractifyAPI\Models\Operations\UpdateDocumentRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\UpdateDocumentRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\UpdateDocumentSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\UpdateDocumentResponse
     {
@@ -214,7 +214,9 @@ class Documents
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "documentWrite", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         

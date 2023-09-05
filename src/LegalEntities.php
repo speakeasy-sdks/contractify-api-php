@@ -31,7 +31,7 @@ class LegalEntities
      * @return \Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesResponse
      */
 	public function listLegalEntities(
-        \Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesResponse
     {

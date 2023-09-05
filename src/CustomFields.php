@@ -31,7 +31,7 @@ class CustomFields
      * @return \Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsResponse
      */
 	public function listCustomFields(
-        \Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsResponse
     {

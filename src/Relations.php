@@ -31,7 +31,7 @@ class Relations
      * @return \Contractify\ContractifyAPI\Models\Operations\CreateRelationResponse
      */
 	public function createRelation(
-        \Contractify\ContractifyAPI\Models\Operations\CreateRelationRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\CreateRelationRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\CreateRelationSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\CreateRelationResponse
     {
@@ -40,7 +40,9 @@ class Relations
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "relationWrite", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -92,7 +94,7 @@ class Relations
      * @return \Contractify\ContractifyAPI\Models\Operations\DeleteRelationResponse
      */
 	public function deleteRelation(
-        \Contractify\ContractifyAPI\Models\Operations\DeleteRelationRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\DeleteRelationRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\DeleteRelationSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\DeleteRelationResponse
     {
@@ -153,7 +155,7 @@ class Relations
      * @return \Contractify\ContractifyAPI\Models\Operations\GetRelationResponse
      */
 	public function getRelation(
-        \Contractify\ContractifyAPI\Models\Operations\GetRelationRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\GetRelationRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\GetRelationSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\GetRelationResponse
     {
@@ -212,7 +214,7 @@ class Relations
      * @return \Contractify\ContractifyAPI\Models\Operations\ListRelationsResponse
      */
 	public function listRelations(
-        \Contractify\ContractifyAPI\Models\Operations\ListRelationsRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\ListRelationsRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\ListRelationsSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListRelationsResponse
     {
@@ -266,7 +268,7 @@ class Relations
      * @return \Contractify\ContractifyAPI\Models\Operations\UpdateRelationResponse
      */
 	public function updateRelation(
-        \Contractify\ContractifyAPI\Models\Operations\UpdateRelationRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\UpdateRelationRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\UpdateRelationSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\UpdateRelationResponse
     {
@@ -275,7 +277,9 @@ class Relations
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "relationWrite", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         

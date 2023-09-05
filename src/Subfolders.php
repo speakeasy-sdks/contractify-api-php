@@ -31,7 +31,7 @@ class Subfolders
      * @return \Contractify\ContractifyAPI\Models\Operations\ListSubfoldersResponse
      */
 	public function listSubfolders(
-        \Contractify\ContractifyAPI\Models\Operations\ListSubfoldersRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\ListSubfoldersRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\ListSubfoldersSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListSubfoldersResponse
     {

@@ -31,7 +31,7 @@ class ContractTypes
      * @return \Contractify\ContractifyAPI\Models\Operations\ListContractTypesResponse
      */
 	public function listContractTypes(
-        \Contractify\ContractifyAPI\Models\Operations\ListContractTypesRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\ListContractTypesRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\ListContractTypesSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListContractTypesResponse
     {

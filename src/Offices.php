@@ -31,7 +31,7 @@ class Offices
      * @return \Contractify\ContractifyAPI\Models\Operations\CreateOfficeResponse
      */
 	public function createOffice(
-        \Contractify\ContractifyAPI\Models\Operations\CreateOfficeRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\CreateOfficeRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\CreateOfficeSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\CreateOfficeResponse
     {
@@ -40,7 +40,9 @@ class Offices
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "officeWrite", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -92,7 +94,7 @@ class Offices
      * @return \Contractify\ContractifyAPI\Models\Operations\DeleteOfficeResponse
      */
 	public function deleteOffice(
-        \Contractify\ContractifyAPI\Models\Operations\DeleteOfficeRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\DeleteOfficeRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\DeleteOfficeSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\DeleteOfficeResponse
     {
@@ -153,7 +155,7 @@ class Offices
      * @return \Contractify\ContractifyAPI\Models\Operations\GetOfficeResponse
      */
 	public function getOffice(
-        \Contractify\ContractifyAPI\Models\Operations\GetOfficeRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\GetOfficeRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\GetOfficeSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\GetOfficeResponse
     {
@@ -212,7 +214,7 @@ class Offices
      * @return \Contractify\ContractifyAPI\Models\Operations\ListOfficesResponse
      */
 	public function listOffices(
-        \Contractify\ContractifyAPI\Models\Operations\ListOfficesRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\ListOfficesRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\ListOfficesSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListOfficesResponse
     {
@@ -265,7 +267,7 @@ class Offices
      * @return \Contractify\ContractifyAPI\Models\Operations\UpdateOfficeResponse
      */
 	public function updateOffice(
-        \Contractify\ContractifyAPI\Models\Operations\UpdateOfficeRequest $request,
+        ?\Contractify\ContractifyAPI\Models\Operations\UpdateOfficeRequest $request,
         \Contractify\ContractifyAPI\Models\Operations\UpdateOfficeSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\UpdateOfficeResponse
     {
@@ -274,7 +276,9 @@ class Offices
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "officeWrite", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
