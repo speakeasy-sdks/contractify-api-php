@@ -1,4 +1,4 @@
-# departments
+# Departments
 
 ### Available Operations
 
@@ -32,7 +32,7 @@ try {
     $request = new CreateDepartmentRequest();
     $request->departmentWrite = new DepartmentWrite();
     $request->departmentWrite->name = 'Sales';
-    $request->company = 521848;
+    $request->company = 528895;
 
     $requestSecurity = new CreateDepartmentSecurity();
     $requestSecurity->oAuth2 = '';
@@ -82,8 +82,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new DeleteDepartmentRequest();
-    $request->company = 105907;
-    $request->department = 414662;
+    $request->company = 479977;
+    $request->department = 568045;
 
     $requestSecurity = new DeleteDepartmentSecurity();
     $requestSecurity->oAuth2 = '';
@@ -133,8 +133,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new GetDepartmentRequest();
-    $request->company = 473600;
-    $request->department = 264555;
+    $request->company = 392785;
+    $request->department = 925597;
 
     $requestSecurity = new GetDepartmentSecurity();
     $requestSecurity->oAuth2 = '';
@@ -184,7 +184,7 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListDepartmentsRequest();
-    $request->company = 186332;
+    $request->company = 836079;
 
     $requestSecurity = new ListDepartmentsSecurity();
     $requestSecurity->oAuth2 = '';
@@ -237,8 +237,8 @@ try {
     $request = new UpdateDepartmentRequest();
     $request->departmentWrite = new DepartmentWrite();
     $request->departmentWrite->name = 'Sales';
-    $request->company = 774234;
-    $request->department = 736918;
+    $request->company = 71036;
+    $request->department = 337396;
 
     $requestSecurity = new UpdateDepartmentSecurity();
     $requestSecurity->oAuth2 = '';

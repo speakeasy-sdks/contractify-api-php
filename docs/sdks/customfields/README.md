@@ -1,4 +1,4 @@
-# customFields
+# CustomFields
 
 ### Available Operations
 
@@ -25,7 +25,7 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListCustomFieldsRequest();
-    $request->company = 758616;
+    $request->company = 812169;
 
     $requestSecurity = new ListCustomFieldsSecurity();
     $requestSecurity->oAuth2 = '';

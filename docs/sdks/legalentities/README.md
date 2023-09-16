@@ -1,4 +1,4 @@
-# legalEntities
+# LegalEntities
 
 ### Available Operations
 
@@ -25,7 +25,7 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListLegalEntitiesRequest();
-    $request->company = 613064;
+    $request->company = 461479;
 
     $requestSecurity = new ListLegalEntitiesSecurity();
     $requestSecurity->oAuth2 = '';

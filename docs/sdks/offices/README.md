@@ -1,4 +1,4 @@
-# offices
+# Offices
 
 ### Available Operations
 
@@ -42,7 +42,7 @@ try {
     $request->officeWrite->phone = '+32 9 234 28 97';
     $request->officeWrite->street = 'Polenstraat 163';
     $request->officeWrite->zip = '9940';
-    $request->company = 437032;
+    $request->company = 520478;
 
     $requestSecurity = new CreateOfficeSecurity();
     $requestSecurity->oAuth2 = '';
@@ -92,8 +92,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new DeleteOfficeRequest();
-    $request->company = 902349;
-    $request->office = 697631;
+    $request->company = 780529;
+    $request->office = 678880;
 
     $requestSecurity = new DeleteOfficeSecurity();
     $requestSecurity->oAuth2 = '';
@@ -143,8 +143,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new GetOfficeRequest();
-    $request->company = 99280;
-    $request->office = 60225;
+    $request->company = 118274;
+    $request->office = 720633;
 
     $requestSecurity = new GetOfficeSecurity();
     $requestSecurity->oAuth2 = '';
@@ -194,7 +194,7 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListOfficesRequest();
-    $request->company = 969810;
+    $request->company = 639921;
 
     $requestSecurity = new ListOfficesSecurity();
     $requestSecurity->oAuth2 = '';
@@ -257,8 +257,8 @@ try {
     $request->officeWrite->phone = '+32 9 234 28 97';
     $request->officeWrite->street = 'Polenstraat 163';
     $request->officeWrite->zip = '9940';
-    $request->company = 666767;
-    $request->office = 653140;
+    $request->company = 582020;
+    $request->office = 143353;
 
     $requestSecurity = new UpdateOfficeSecurity();
     $requestSecurity->oAuth2 = '';

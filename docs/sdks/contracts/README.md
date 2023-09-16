@@ -1,4 +1,4 @@
-# contracts
+# Contracts
 
 ### Available Operations
 
@@ -37,23 +37,15 @@ try {
     $request = new CreateContractRequest();
     $request->contractWrite = new ContractWrite();
     $request->contractWrite->contractTypes = [
-        844266,
-        602763,
-        857946,
+        715190,
     ];
     $request->contractWrite->customFieldValues = [
         new CustomFieldValueWrite(),
-        new CustomFieldValueWrite(),
-        new CustomFieldValueWrite(),
     ];
     $request->contractWrite->departments = [
-        423655,
-        623564,
-        645894,
-        384382,
+        844266,
     ];
     $request->contractWrite->documents = [
-        1,
         1,
     ];
     $request->contractWrite->dossierId = 1;
@@ -61,23 +53,16 @@ try {
     $request->contractWrite->endDate = DateTime::createFromFormat('Y-m-d', '2021-12-31');
     $request->contractWrite->isOpenEnded = false;
     $request->contractWrite->legalEntities = [
-        891773,
-        56713,
+        602763,
     ];
     $request->contractWrite->name = 'Partnership agreement';
     $request->contractWrite->offices = [
-        272656,
-        383441,
-        477665,
-        791725,
+        857946,
     ];
     $request->contractWrite->ownerId = 1;
     $request->contractWrite->phase = ContractPhase::Ongoing;
     $request->contractWrite->relations = [
-        528895,
-        479977,
-        568045,
-        392785,
+        544883,
     ];
     $request->contractWrite->renewal = new ContractRenewal();
     $request->contractWrite->renewal->automaticRenewal = new ContractAutomaticRenewal();
@@ -89,7 +74,7 @@ try {
     $request->contractWrite->termination->isTerminableAtAnyTime = false;
     $request->contractWrite->termination->terminationDate = DateTime::createFromFormat('Y-m-d', '2021-11-30');
     $request->contractWrite->termination->terminationDuration = 'P1M';
-    $request->company = 925597;
+    $request->company = 847252;
 
     $requestSecurity = new CreateContractSecurity();
     $requestSecurity->oAuth2 = '';
@@ -139,8 +124,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new DeleteContractRequest();
-    $request->company = 836079;
-    $request->contract = 71036;
+    $request->company = 423655;
+    $request->contract = 623564;
 
     $requestSecurity = new DeleteContractSecurity();
     $requestSecurity->oAuth2 = '';
@@ -190,8 +175,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new GetContractRequest();
-    $request->company = 337396;
-    $request->contract = 87129;
+    $request->company = 645894;
+    $request->contract = 384382;
 
     $requestSecurity = new GetContractSecurity();
     $requestSecurity->oAuth2 = '';
@@ -241,8 +226,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListContractsRequest();
-    $request->company = 648172;
-    $request->page = 20218;
+    $request->company = 437587;
+    $request->page = 297534;
 
     $requestSecurity = new ListContractsSecurity();
     $requestSecurity->oAuth2 = '';
@@ -300,22 +285,15 @@ try {
     $request = new UpdateContractRequest();
     $request->contractWrite = new ContractWrite();
     $request->contractWrite->contractTypes = [
-        832620,
-        957156,
+        891773,
     ];
     $request->contractWrite->customFieldValues = [
         new CustomFieldValueWrite(),
-        new CustomFieldValueWrite(),
-        new CustomFieldValueWrite(),
-        new CustomFieldValueWrite(),
     ];
     $request->contractWrite->departments = [
-        870013,
+        56713,
     ];
     $request->contractWrite->documents = [
-        1,
-        1,
-        1,
         1,
     ];
     $request->contractWrite->dossierId = 1;
@@ -323,23 +301,16 @@ try {
     $request->contractWrite->endDate = DateTime::createFromFormat('Y-m-d', '2021-12-31');
     $request->contractWrite->isOpenEnded = false;
     $request->contractWrite->legalEntities = [
-        473608,
-        799159,
-        800911,
-        461479,
+        963663,
     ];
     $request->contractWrite->name = 'Partnership agreement';
     $request->contractWrite->offices = [
-        780529,
-        678880,
-        118274,
+        272656,
     ];
     $request->contractWrite->ownerId = 1;
     $request->contractWrite->phase = ContractPhase::Ongoing;
     $request->contractWrite->relations = [
-        639921,
-        582020,
-        143353,
+        383441,
     ];
     $request->contractWrite->renewal = new ContractRenewal();
     $request->contractWrite->renewal->automaticRenewal = new ContractAutomaticRenewal();
@@ -351,8 +322,8 @@ try {
     $request->contractWrite->termination->isTerminableAtAnyTime = false;
     $request->contractWrite->termination->terminationDate = DateTime::createFromFormat('Y-m-d', '2021-11-30');
     $request->contractWrite->termination->terminationDuration = 'P1M';
-    $request->company = 537373;
-    $request->contract = 944669;
+    $request->company = 477665;
+    $request->contract = 791725;
 
     $requestSecurity = new UpdateContractSecurity();
     $requestSecurity->oAuth2 = '';

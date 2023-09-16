@@ -1,4 +1,4 @@
-# subfolders
+# Subfolders
 
 ### Available Operations
 
@@ -25,7 +25,7 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListSubfoldersRequest();
-    $request->company = 570197;
+    $request->company = 736918;
 
     $requestSecurity = new ListSubfoldersSecurity();
     $requestSecurity->oAuth2 = '';

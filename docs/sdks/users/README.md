@@ -1,4 +1,4 @@
-# users
+# Users
 
 ### Available Operations
 
@@ -71,8 +71,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListUsersRequest();
-    $request->company = 161309;
-    $request->page = 995300;
+    $request->company = 222321;
+    $request->page = 616934;
 
     $requestSecurity = new ListUsersSecurity();
     $requestSecurity->oAuth2 = '';

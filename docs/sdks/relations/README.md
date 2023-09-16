@@ -1,4 +1,4 @@
-# relations
+# Relations
 
 ### Available Operations
 
@@ -46,7 +46,7 @@ try {
     $request->relationWrite->reference = 'REF123';
     $request->relationWrite->vat = 'BE12345678';
     $request->relationWrite->website = 'https://www.example.org';
-    $request->company = 670638;
+    $request->company = 537373;
 
     $requestSecurity = new CreateRelationSecurity();
     $requestSecurity->oAuth2 = '';
@@ -96,8 +96,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new DeleteRelationRequest();
-    $request->company = 170909;
-    $request->relation = 210382;
+    $request->company = 944669;
+    $request->relation = 758616;
 
     $requestSecurity = new DeleteRelationSecurity();
     $requestSecurity->oAuth2 = '';
@@ -147,8 +147,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new GetRelationRequest();
-    $request->company = 358152;
-    $request->relation = 128926;
+    $request->company = 521848;
+    $request->relation = 105907;
 
     $requestSecurity = new GetRelationSecurity();
     $requestSecurity->oAuth2 = '';
@@ -198,9 +198,9 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListRelationsRequest();
-    $request->company = 750686;
-    $request->page = 315428;
-    $request->reference = 'omnis';
+    $request->company = 414662;
+    $request->page = 473600;
+    $request->reference = 'modi';
 
     $requestSecurity = new ListRelationsSecurity();
     $requestSecurity->oAuth2 = '';
@@ -267,8 +267,8 @@ try {
     $request->relationWrite->reference = 'REF123';
     $request->relationWrite->vat = 'BE12345678';
     $request->relationWrite->website = 'https://www.example.org';
-    $request->company = 363711;
-    $request->relation = 325047;
+    $request->company = 186332;
+    $request->relation = 774234;
 
     $requestSecurity = new UpdateRelationSecurity();
     $requestSecurity->oAuth2 = '';

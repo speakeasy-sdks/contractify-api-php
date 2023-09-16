@@ -1,4 +1,4 @@
-# documents
+# Documents
 
 ### Available Operations
 
@@ -28,8 +28,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new DeleteDocumentRequest();
-    $request->company = 456150;
-    $request->document = 216550;
+    $request->company = 87129;
+    $request->document = 648172;
 
     $requestSecurity = new DeleteDocumentSecurity();
     $requestSecurity->oAuth2 = '';
@@ -79,8 +79,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new GetDocumentRequest();
-    $request->company = 568434;
-    $request->document = 135218;
+    $request->company = 20218;
+    $request->document = 368241;
 
     $requestSecurity = new GetDocumentSecurity();
     $requestSecurity->oAuth2 = '';
@@ -131,12 +131,12 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListDocumentsRequest();
-    $request->company = 18789;
-    $request->esigningStatus = ListDocumentsEsigningStatus::LegalDeclined;
-    $request->esigningUpdatedAfter = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-13T17:41:46.141Z');
-    $request->page = 612096;
-    $request->relationId = 222321;
-    $request->signedAfter = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-24T20:42:46.563Z');
+    $request->company = 832620;
+    $request->esigningStatus = ListDocumentsEsigningStatus::Revoked;
+    $request->esigningUpdatedAfter = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-31T07:34:52.790Z');
+    $request->page = 870013;
+    $request->relationId = 870088;
+    $request->signedAfter = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-31T09:34:50.024Z');
 
     $requestSecurity = new ListDocumentsSecurity();
     $requestSecurity->oAuth2 = '';
@@ -191,26 +191,18 @@ try {
     $request->documentWrite = new DocumentWrite();
     $request->documentWrite->contracts = [
         1,
-        1,
-        1,
-        1,
     ];
     $request->documentWrite->customFieldValues = [
-        new CustomFieldValueWrite(),
-        new CustomFieldValueWrite(),
-        new CustomFieldValueWrite(),
         new CustomFieldValueWrite(),
     ];
     $request->documentWrite->description = 'Lorem ipsum dolor sit amet.';
     $request->documentWrite->dossiers = [
         1,
-        1,
-        1,
     ];
     $request->documentWrite->name = 'filename.pdf';
     $request->documentWrite->ownerId = 1;
-    $request->company = 449950;
-    $request->document = 359508;
+    $request->company = 799159;
+    $request->document = 800911;
 
     $requestSecurity = new UpdateDocumentSecurity();
     $requestSecurity->oAuth2 = '';

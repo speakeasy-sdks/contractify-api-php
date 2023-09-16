@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace Contractify\ContractifyAPI\Models\Shared;
 
 
-/**
- * TaskCollection - OK
- * 
- * @package Contractify\ContractifyAPI\Models\Shared
- * @access public
- */
 class TaskCollection
 {
     /**
