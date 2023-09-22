@@ -27,12 +27,10 @@ class Contracts
      * Create a contract
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\CreateContractRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\CreateContractSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\CreateContractResponse
      */
 	public function createContract(
         ?\Contractify\ContractifyAPI\Models\Operations\CreateContractRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\CreateContractSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\CreateContractResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -46,8 +44,7 @@ class Contracts
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -90,12 +87,10 @@ class Contracts
      * Delete a contract
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\DeleteContractRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\DeleteContractSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\DeleteContractResponse
      */
 	public function deleteContract(
         ?\Contractify\ContractifyAPI\Models\Operations\DeleteContractRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\DeleteContractSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\DeleteContractResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -105,8 +100,7 @@ class Contracts
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -151,12 +145,10 @@ class Contracts
      * Get information about a contract
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\GetContractRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\GetContractSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\GetContractResponse
      */
 	public function getContract(
         ?\Contractify\ContractifyAPI\Models\Operations\GetContractRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\GetContractSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\GetContractResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -166,8 +158,7 @@ class Contracts
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -210,12 +201,10 @@ class Contracts
      * List all the contracts within a company
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\ListContractsRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\ListContractsSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\ListContractsResponse
      */
 	public function listContracts(
         ?\Contractify\ContractifyAPI\Models\Operations\ListContractsRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\ListContractsSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListContractsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -226,8 +215,7 @@ class Contracts
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -264,12 +252,10 @@ class Contracts
      * Update a contract
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\UpdateContractRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\UpdateContractSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\UpdateContractResponse
      */
 	public function updateContract(
         ?\Contractify\ContractifyAPI\Models\Operations\UpdateContractRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\UpdateContractSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\UpdateContractResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -283,8 +269,7 @@ class Contracts
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

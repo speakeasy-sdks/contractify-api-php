@@ -27,12 +27,10 @@ class Documents
      * Delete a document
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\DeleteDocumentRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\DeleteDocumentSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\DeleteDocumentResponse
      */
 	public function deleteDocument(
         ?\Contractify\ContractifyAPI\Models\Operations\DeleteDocumentRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\DeleteDocumentSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\DeleteDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,8 +40,7 @@ class Documents
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -88,12 +85,10 @@ class Documents
      * Get information about a document
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\GetDocumentRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\GetDocumentSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\GetDocumentResponse
      */
 	public function getDocument(
         ?\Contractify\ContractifyAPI\Models\Operations\GetDocumentRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\GetDocumentSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\GetDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -103,8 +98,7 @@ class Documents
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -147,12 +141,10 @@ class Documents
      * List all the documents within a company
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\ListDocumentsRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\ListDocumentsSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\ListDocumentsResponse
      */
 	public function listDocuments(
         ?\Contractify\ContractifyAPI\Models\Operations\ListDocumentsRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\ListDocumentsSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListDocumentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -163,8 +155,7 @@ class Documents
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -201,12 +192,10 @@ class Documents
      * Update a document
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\UpdateDocumentRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\UpdateDocumentSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\UpdateDocumentResponse
      */
 	public function updateDocument(
         ?\Contractify\ContractifyAPI\Models\Operations\UpdateDocumentRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\UpdateDocumentSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\UpdateDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -220,8 +209,7 @@ class Documents
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -18,17 +18,13 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Operations\CurrentUserSecurity;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
-    $requestSecurity = new CurrentUserSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->users->currentUser($requestSecurity);
+    $response = $sdk->users->currentUser();
 
     if ($response->currentUser200ApplicationJSONObject !== null) {
         // handle response
@@ -37,12 +33,6 @@ try {
     // handle exception
 }
 ```
-
-### Parameters
-
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `security`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\CurrentUserSecurity](../../models/operations/CurrentUserSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
 
 
 ### Response
@@ -63,22 +53,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\ListUsersRequest;
-use \Contractify\ContractifyAPI\Models\Operations\ListUsersSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new ListUsersRequest();
-    $request->company = 222321;
-    $request->page = 616934;
+    $request->company = 616934;
+    $request->page = 386489;
 
-    $requestSecurity = new ListUsersSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->users->listUsers($request, $requestSecurity);
+    $response = $sdk->users->listUsers($request);
 
     if ($response->userCollection !== null) {
         // handle response
@@ -90,10 +76,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\ListUsersRequest](../../models/operations/ListUsersRequest.md)   | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
-| `security`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\ListUsersSecurity](../../models/operations/ListUsersSecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\ListUsersRequest](../../models/operations/ListUsersRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 
 ### Response

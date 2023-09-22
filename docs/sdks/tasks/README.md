@@ -21,11 +21,11 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\CreateTaskRequest;
 use \Contractify\ContractifyAPI\Models\Shared\TaskWrite;
 use \Contractify\ContractifyAPI\Models\Shared\TaskWriteDueDateDependsOn;
 use \Contractify\ContractifyAPI\Models\Shared\TaskWriteStatus;
-use \Contractify\ContractifyAPI\Models\Operations\CreateTaskSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
@@ -43,13 +43,9 @@ try {
     $request->taskWrite->repetitionInterval = 'P1Y';
     $request->taskWrite->status = TaskWriteStatus::Accomplished;
     $request->taskWrite->title = 'My task';
-    $request->company = 456150;
+    $request->company = 216550;
 
-    $requestSecurity = new CreateTaskSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->tasks->createTask($request, $requestSecurity);
+    $response = $sdk->tasks->createTask($request);
 
     if ($response->createTask200ApplicationJSONObject !== null) {
         // handle response
@@ -61,10 +57,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\CreateTaskRequest](../../models/operations/CreateTaskRequest.md)   | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
-| `security`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\CreateTaskSecurity](../../models/operations/CreateTaskSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\CreateTaskRequest](../../models/operations/CreateTaskRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
@@ -85,22 +80,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\DeleteTaskRequest;
-use \Contractify\ContractifyAPI\Models\Operations\DeleteTaskSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new DeleteTaskRequest();
-    $request->company = 216550;
-    $request->task = 568434;
+    $request->company = 568434;
+    $request->task = 135218;
 
-    $requestSecurity = new DeleteTaskSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->tasks->deleteTask($request, $requestSecurity);
+    $response = $sdk->tasks->deleteTask($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -112,10 +103,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\DeleteTaskRequest](../../models/operations/DeleteTaskRequest.md)   | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
-| `security`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\DeleteTaskSecurity](../../models/operations/DeleteTaskSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\DeleteTaskRequest](../../models/operations/DeleteTaskRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
@@ -136,22 +126,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\GetTaskRequest;
-use \Contractify\ContractifyAPI\Models\Operations\GetTaskSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new GetTaskRequest();
-    $request->company = 135218;
-    $request->task = 18789;
+    $request->company = 18789;
+    $request->task = 324141;
 
-    $requestSecurity = new GetTaskSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->tasks->getTask($request, $requestSecurity);
+    $response = $sdk->tasks->getTask($request);
 
     if ($response->getTask200ApplicationJSONObject !== null) {
         // handle response
@@ -163,10 +149,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\GetTaskRequest](../../models/operations/GetTaskRequest.md)   | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
-| `security`                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\GetTaskSecurity](../../models/operations/GetTaskSecurity.md) | :heavy_check_mark:                                                                                          | The security requirements to use for the request.                                                           |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\GetTaskRequest](../../models/operations/GetTaskRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 
 ### Response
@@ -187,22 +172,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\ListTasksRequest;
-use \Contractify\ContractifyAPI\Models\Operations\ListTasksSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new ListTasksRequest();
-    $request->company = 324141;
-    $request->page = 617636;
+    $request->company = 617636;
+    $request->page = 149675;
 
-    $requestSecurity = new ListTasksSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->tasks->listTasks($request, $requestSecurity);
+    $response = $sdk->tasks->listTasks($request);
 
     if ($response->taskCollection !== null) {
         // handle response
@@ -214,10 +195,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\ListTasksRequest](../../models/operations/ListTasksRequest.md)   | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
-| `security`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\ListTasksSecurity](../../models/operations/ListTasksSecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\ListTasksRequest](../../models/operations/ListTasksRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 
 ### Response
@@ -238,11 +218,11 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\UpdateTaskRequest;
 use \Contractify\ContractifyAPI\Models\Shared\TaskUpdate;
 use \Contractify\ContractifyAPI\Models\Shared\TaskUpdateDueDateDependsOn;
 use \Contractify\ContractifyAPI\Models\Shared\TaskUpdateStatus;
-use \Contractify\ContractifyAPI\Models\Operations\UpdateTaskSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
@@ -259,14 +239,10 @@ try {
     $request->taskUpdate->repetitionInterval = 'P1Y';
     $request->taskUpdate->status = TaskUpdateStatus::Accomplished;
     $request->taskUpdate->title = 'My task';
-    $request->company = 149675;
-    $request->task = 612096;
+    $request->company = 612096;
+    $request->task = 222321;
 
-    $requestSecurity = new UpdateTaskSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->tasks->updateTask($request, $requestSecurity);
+    $response = $sdk->tasks->updateTask($request);
 
     if ($response->updateTask200ApplicationJSONObject !== null) {
         // handle response
@@ -278,10 +254,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\UpdateTaskRequest](../../models/operations/UpdateTaskRequest.md)   | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
-| `security`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\UpdateTaskSecurity](../../models/operations/UpdateTaskSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\UpdateTaskRequest](../../models/operations/UpdateTaskRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response

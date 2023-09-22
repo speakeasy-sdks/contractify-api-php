@@ -27,12 +27,10 @@ class Subfolders
      * List all the subfolders within a company
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\ListSubfoldersRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\ListSubfoldersSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\ListSubfoldersResponse
      */
 	public function listSubfolders(
         ?\Contractify\ContractifyAPI\Models\Operations\ListSubfoldersRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\ListSubfoldersSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListSubfoldersResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,8 +40,7 @@ class Subfolders
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

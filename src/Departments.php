@@ -27,12 +27,10 @@ class Departments
      * Create a department
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\CreateDepartmentRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\CreateDepartmentSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\CreateDepartmentResponse
      */
 	public function createDepartment(
         ?\Contractify\ContractifyAPI\Models\Operations\CreateDepartmentRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\CreateDepartmentSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\CreateDepartmentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -46,8 +44,7 @@ class Departments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -90,12 +87,10 @@ class Departments
      * Delete a department
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentResponse
      */
 	public function deleteDepartment(
         ?\Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -105,8 +100,7 @@ class Departments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -151,12 +145,10 @@ class Departments
      * Get information about a department
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\GetDepartmentRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\GetDepartmentSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\GetDepartmentResponse
      */
 	public function getDepartment(
         ?\Contractify\ContractifyAPI\Models\Operations\GetDepartmentRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\GetDepartmentSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\GetDepartmentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -166,8 +158,7 @@ class Departments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -210,12 +201,10 @@ class Departments
      * List all the departments within a company
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\ListDepartmentsRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\ListDepartmentsSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\ListDepartmentsResponse
      */
 	public function listDepartments(
         ?\Contractify\ContractifyAPI\Models\Operations\ListDepartmentsRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\ListDepartmentsSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListDepartmentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -225,8 +214,7 @@ class Departments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -263,12 +251,10 @@ class Departments
      * Update a department
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentResponse
      */
 	public function updateDepartment(
         ?\Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -282,8 +268,7 @@ class Departments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

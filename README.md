@@ -30,8 +30,6 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```php
 <?php
 
@@ -39,21 +37,17 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\ListContractTypesRequest;
-use \Contractify\ContractifyAPI\Models\Operations\ListContractTypesSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new ListContractTypesRequest();
-    $request->company = 548814;
+    $request->company = 592845;
 
-    $requestSecurity = new ListContractTypesSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->contractTypes->listContractTypes($request, $requestSecurity);
+    $response = $sdk->contractTypes->listContractTypes($request);
 
     if ($response->contractTypeCollection !== null) {
         // handle response
@@ -136,6 +130,18 @@ try {
 * [currentUser](docs/sdks/users/README.md#currentuser) - Current User
 * [listUsers](docs/sdks/users/README.md#listusers) - List users
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 

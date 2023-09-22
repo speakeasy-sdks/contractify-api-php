@@ -27,12 +27,10 @@ class Relations
      * Create a relation
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\CreateRelationRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\CreateRelationSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\CreateRelationResponse
      */
 	public function createRelation(
         ?\Contractify\ContractifyAPI\Models\Operations\CreateRelationRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\CreateRelationSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\CreateRelationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -46,8 +44,7 @@ class Relations
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -90,12 +87,10 @@ class Relations
      * Delete a relation
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\DeleteRelationRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\DeleteRelationSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\DeleteRelationResponse
      */
 	public function deleteRelation(
         ?\Contractify\ContractifyAPI\Models\Operations\DeleteRelationRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\DeleteRelationSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\DeleteRelationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -105,8 +100,7 @@ class Relations
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -151,12 +145,10 @@ class Relations
      * Get information about a relation
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\GetRelationRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\GetRelationSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\GetRelationResponse
      */
 	public function getRelation(
         ?\Contractify\ContractifyAPI\Models\Operations\GetRelationRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\GetRelationSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\GetRelationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -166,8 +158,7 @@ class Relations
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -210,12 +201,10 @@ class Relations
      * List all the relations within a company
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\ListRelationsRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\ListRelationsSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\ListRelationsResponse
      */
 	public function listRelations(
         ?\Contractify\ContractifyAPI\Models\Operations\ListRelationsRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\ListRelationsSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListRelationsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -226,8 +215,7 @@ class Relations
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -264,12 +252,10 @@ class Relations
      * Update a relation
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\UpdateRelationRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\UpdateRelationSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\UpdateRelationResponse
      */
 	public function updateRelation(
         ?\Contractify\ContractifyAPI\Models\Operations\UpdateRelationRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\UpdateRelationSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\UpdateRelationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -283,8 +269,7 @@ class Relations
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

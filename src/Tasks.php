@@ -27,12 +27,10 @@ class Tasks
      * Create a task
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\CreateTaskRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\CreateTaskSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\CreateTaskResponse
      */
 	public function createTask(
         ?\Contractify\ContractifyAPI\Models\Operations\CreateTaskRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\CreateTaskSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\CreateTaskResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -46,8 +44,7 @@ class Tasks
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -90,12 +87,10 @@ class Tasks
      * Delete a task
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\DeleteTaskRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\DeleteTaskSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\DeleteTaskResponse
      */
 	public function deleteTask(
         ?\Contractify\ContractifyAPI\Models\Operations\DeleteTaskRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\DeleteTaskSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\DeleteTaskResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -105,8 +100,7 @@ class Tasks
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,12 +139,10 @@ class Tasks
      * Get a task
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\GetTaskRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\GetTaskSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\GetTaskResponse
      */
 	public function getTask(
         ?\Contractify\ContractifyAPI\Models\Operations\GetTaskRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\GetTaskSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\GetTaskResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -160,8 +152,7 @@ class Tasks
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -204,12 +195,10 @@ class Tasks
      * List all tasks within a company
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\ListTasksRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\ListTasksSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\ListTasksResponse
      */
 	public function listTasks(
         ?\Contractify\ContractifyAPI\Models\Operations\ListTasksRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\ListTasksSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListTasksResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -220,8 +209,7 @@ class Tasks
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -258,12 +246,10 @@ class Tasks
      * Update a task
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\UpdateTaskRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\UpdateTaskSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\UpdateTaskResponse
      */
 	public function updateTask(
         ?\Contractify\ContractifyAPI\Models\Operations\UpdateTaskRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\UpdateTaskSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\UpdateTaskResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -277,8 +263,7 @@ class Tasks
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

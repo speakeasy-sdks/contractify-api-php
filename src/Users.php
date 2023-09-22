@@ -26,11 +26,9 @@ class Users
      * 
      * Get the current user details
      * 
-     * @param \Contractify\ContractifyAPI\Models\Operations\CurrentUserSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\CurrentUserResponse
      */
 	public function currentUser(
-        \Contractify\ContractifyAPI\Models\Operations\CurrentUserSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\CurrentUserResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -40,8 +38,7 @@ class Users
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -78,12 +75,10 @@ class Users
      * List all the users within a company
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\ListUsersRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\ListUsersSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\ListUsersResponse
      */
 	public function listUsers(
         ?\Contractify\ContractifyAPI\Models\Operations\ListUsersRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\ListUsersSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListUsersResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -94,8 +89,7 @@ class Users
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

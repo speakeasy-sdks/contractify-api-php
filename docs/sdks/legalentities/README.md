@@ -17,21 +17,17 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesRequest;
-use \Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new ListLegalEntitiesRequest();
-    $request->company = 461479;
+    $request->company = 520478;
 
-    $requestSecurity = new ListLegalEntitiesSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->legalEntities->listLegalEntities($request, $requestSecurity);
+    $response = $sdk->legalEntities->listLegalEntities($request);
 
     if ($response->legalEntityCollection !== null) {
         // handle response
@@ -43,10 +39,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesRequest](../../models/operations/ListLegalEntitiesRequest.md)   | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
-| `security`                                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesSecurity](../../models/operations/ListLegalEntitiesSecurity.md) | :heavy_check_mark:                                                                                                              | The security requirements to use for the request.                                                                               |
+| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesRequest](../../models/operations/ListLegalEntitiesRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response

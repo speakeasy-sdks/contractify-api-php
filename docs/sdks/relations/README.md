@@ -21,10 +21,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\CreateRelationRequest;
 use \Contractify\ContractifyAPI\Models\Shared\RelationWrite;
 use \Contractify\ContractifyAPI\Models\Shared\Address;
-use \Contractify\ContractifyAPI\Models\Operations\CreateRelationSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
@@ -46,13 +46,9 @@ try {
     $request->relationWrite->reference = 'REF123';
     $request->relationWrite->vat = 'BE12345678';
     $request->relationWrite->website = 'https://www.example.org';
-    $request->company = 537373;
+    $request->company = 944669;
 
-    $requestSecurity = new CreateRelationSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->relations->createRelation($request, $requestSecurity);
+    $response = $sdk->relations->createRelation($request);
 
     if ($response->createRelation201ApplicationJSONObject !== null) {
         // handle response
@@ -64,10 +60,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\CreateRelationRequest](../../models/operations/CreateRelationRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
-| `security`                                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\CreateRelationSecurity](../../models/operations/CreateRelationSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\CreateRelationRequest](../../models/operations/CreateRelationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
@@ -88,22 +83,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\DeleteRelationRequest;
-use \Contractify\ContractifyAPI\Models\Operations\DeleteRelationSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new DeleteRelationRequest();
-    $request->company = 944669;
-    $request->relation = 758616;
+    $request->company = 758616;
+    $request->relation = 521848;
 
-    $requestSecurity = new DeleteRelationSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->relations->deleteRelation($request, $requestSecurity);
+    $response = $sdk->relations->deleteRelation($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -115,10 +106,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\DeleteRelationRequest](../../models/operations/DeleteRelationRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
-| `security`                                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\DeleteRelationSecurity](../../models/operations/DeleteRelationSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\DeleteRelationRequest](../../models/operations/DeleteRelationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
@@ -139,22 +129,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\GetRelationRequest;
-use \Contractify\ContractifyAPI\Models\Operations\GetRelationSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new GetRelationRequest();
-    $request->company = 521848;
-    $request->relation = 105907;
+    $request->company = 105907;
+    $request->relation = 414662;
 
-    $requestSecurity = new GetRelationSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->relations->getRelation($request, $requestSecurity);
+    $response = $sdk->relations->getRelation($request);
 
     if ($response->getRelation200ApplicationJSONObject !== null) {
         // handle response
@@ -166,10 +152,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\GetRelationRequest](../../models/operations/GetRelationRequest.md)   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
-| `security`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\GetRelationSecurity](../../models/operations/GetRelationSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\GetRelationRequest](../../models/operations/GetRelationRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
@@ -190,23 +175,19 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\ListRelationsRequest;
-use \Contractify\ContractifyAPI\Models\Operations\ListRelationsSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new ListRelationsRequest();
-    $request->company = 414662;
-    $request->page = 473600;
-    $request->reference = 'modi';
+    $request->company = 473600;
+    $request->page = 264555;
+    $request->reference = 'qui';
 
-    $requestSecurity = new ListRelationsSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->relations->listRelations($request, $requestSecurity);
+    $response = $sdk->relations->listRelations($request);
 
     if ($response->relationCollection !== null) {
         // handle response
@@ -218,10 +199,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\ListRelationsRequest](../../models/operations/ListRelationsRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
-| `security`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\ListRelationsSecurity](../../models/operations/ListRelationsSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\ListRelationsRequest](../../models/operations/ListRelationsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
@@ -242,10 +222,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\UpdateRelationRequest;
 use \Contractify\ContractifyAPI\Models\Shared\RelationWrite;
 use \Contractify\ContractifyAPI\Models\Shared\Address;
-use \Contractify\ContractifyAPI\Models\Operations\UpdateRelationSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
@@ -267,14 +247,10 @@ try {
     $request->relationWrite->reference = 'REF123';
     $request->relationWrite->vat = 'BE12345678';
     $request->relationWrite->website = 'https://www.example.org';
-    $request->company = 186332;
-    $request->relation = 774234;
+    $request->company = 774234;
+    $request->relation = 736918;
 
-    $requestSecurity = new UpdateRelationSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->relations->updateRelation($request, $requestSecurity);
+    $response = $sdk->relations->updateRelation($request);
 
     if ($response->updateRelation200ApplicationJSONObject !== null) {
         // handle response
@@ -286,10 +262,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\UpdateRelationRequest](../../models/operations/UpdateRelationRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
-| `security`                                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\UpdateRelationSecurity](../../models/operations/UpdateRelationSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\UpdateRelationRequest](../../models/operations/UpdateRelationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response

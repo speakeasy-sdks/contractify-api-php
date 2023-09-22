@@ -27,12 +27,10 @@ class LegalEntities
      * List all the legal entities within a company
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesResponse
      */
 	public function listLegalEntities(
         ?\Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,8 +40,7 @@ class LegalEntities
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

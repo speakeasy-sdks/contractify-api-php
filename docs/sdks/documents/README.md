@@ -20,22 +20,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\DeleteDocumentRequest;
-use \Contractify\ContractifyAPI\Models\Operations\DeleteDocumentSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new DeleteDocumentRequest();
-    $request->company = 87129;
-    $request->document = 648172;
+    $request->company = 648172;
+    $request->document = 20218;
 
-    $requestSecurity = new DeleteDocumentSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->documents->deleteDocument($request, $requestSecurity);
+    $response = $sdk->documents->deleteDocument($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -47,10 +43,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\DeleteDocumentRequest](../../models/operations/DeleteDocumentRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
-| `security`                                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\DeleteDocumentSecurity](../../models/operations/DeleteDocumentSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\DeleteDocumentRequest](../../models/operations/DeleteDocumentRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
@@ -71,22 +66,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\GetDocumentRequest;
-use \Contractify\ContractifyAPI\Models\Operations\GetDocumentSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new GetDocumentRequest();
-    $request->company = 20218;
-    $request->document = 368241;
+    $request->company = 368241;
+    $request->document = 832620;
 
-    $requestSecurity = new GetDocumentSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->documents->getDocument($request, $requestSecurity);
+    $response = $sdk->documents->getDocument($request);
 
     if ($response->getDocument200ApplicationJSONObject !== null) {
         // handle response
@@ -98,10 +89,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\GetDocumentRequest](../../models/operations/GetDocumentRequest.md)   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
-| `security`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\GetDocumentSecurity](../../models/operations/GetDocumentSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\GetDocumentRequest](../../models/operations/GetDocumentRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
@@ -122,27 +112,23 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\ListDocumentsRequest;
 use \Contractify\ContractifyAPI\Models\Operations\ListDocumentsEsigningStatus;
-use \Contractify\ContractifyAPI\Models\Operations\ListDocumentsSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new ListDocumentsRequest();
-    $request->company = 832620;
-    $request->esigningStatus = ListDocumentsEsigningStatus::Revoked;
-    $request->esigningUpdatedAfter = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-07-31T07:34:52.790Z');
-    $request->page = 870013;
-    $request->relationId = 870088;
-    $request->signedAfter = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-31T09:34:50.024Z');
+    $request->company = 957156;
+    $request->esigningStatus = ListDocumentsEsigningStatus::FinishedButPartiallySigned;
+    $request->esigningUpdatedAfter = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-17T10:41:36.857Z');
+    $request->page = 870088;
+    $request->relationId = 978619;
+    $request->signedAfter = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-15T07:22:15.330Z');
 
-    $requestSecurity = new ListDocumentsSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->documents->listDocuments($request, $requestSecurity);
+    $response = $sdk->documents->listDocuments($request);
 
     if ($response->documentCollection !== null) {
         // handle response
@@ -154,10 +140,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\ListDocumentsRequest](../../models/operations/ListDocumentsRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
-| `security`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\ListDocumentsSecurity](../../models/operations/ListDocumentsSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\ListDocumentsRequest](../../models/operations/ListDocumentsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
@@ -178,10 +163,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\UpdateDocumentRequest;
 use \Contractify\ContractifyAPI\Models\Shared\DocumentWrite;
 use \Contractify\ContractifyAPI\Models\Shared\CustomFieldValueWrite;
-use \Contractify\ContractifyAPI\Models\Operations\UpdateDocumentSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
@@ -201,14 +186,10 @@ try {
     ];
     $request->documentWrite->name = 'filename.pdf';
     $request->documentWrite->ownerId = 1;
-    $request->company = 799159;
-    $request->document = 800911;
+    $request->company = 800911;
+    $request->document = 461479;
 
-    $requestSecurity = new UpdateDocumentSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->documents->updateDocument($request, $requestSecurity);
+    $response = $sdk->documents->updateDocument($request);
 
     if ($response->updateDocument200ApplicationJSONObject !== null) {
         // handle response
@@ -220,10 +201,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\UpdateDocumentRequest](../../models/operations/UpdateDocumentRequest.md)   | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
-| `security`                                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\UpdateDocumentSecurity](../../models/operations/UpdateDocumentSecurity.md) | :heavy_check_mark:                                                                                                        | The security requirements to use for the request.                                                                         |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\UpdateDocumentRequest](../../models/operations/UpdateDocumentRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response

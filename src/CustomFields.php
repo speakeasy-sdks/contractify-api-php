@@ -27,12 +27,10 @@ class CustomFields
      * List all the custom fields within a company
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsResponse
      */
 	public function listCustomFields(
         ?\Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,8 +40,7 @@ class CustomFields
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

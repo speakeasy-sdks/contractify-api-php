@@ -17,21 +17,17 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\ListContractTypesRequest;
-use \Contractify\ContractifyAPI\Models\Operations\ListContractTypesSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new ListContractTypesRequest();
-    $request->company = 592845;
+    $request->company = 715190;
 
-    $requestSecurity = new ListContractTypesSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->contractTypes->listContractTypes($request, $requestSecurity);
+    $response = $sdk->contractTypes->listContractTypes($request);
 
     if ($response->contractTypeCollection !== null) {
         // handle response
@@ -43,10 +39,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\ListContractTypesRequest](../../models/operations/ListContractTypesRequest.md)   | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
-| `security`                                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\ListContractTypesSecurity](../../models/operations/ListContractTypesSecurity.md) | :heavy_check_mark:                                                                                                              | The security requirements to use for the request.                                                                               |
+| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\ListContractTypesRequest](../../models/operations/ListContractTypesRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response

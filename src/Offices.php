@@ -27,12 +27,10 @@ class Offices
      * Create an office
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\CreateOfficeRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\CreateOfficeSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\CreateOfficeResponse
      */
 	public function createOffice(
         ?\Contractify\ContractifyAPI\Models\Operations\CreateOfficeRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\CreateOfficeSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\CreateOfficeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -46,8 +44,7 @@ class Offices
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -90,12 +87,10 @@ class Offices
      * Delete an office
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\DeleteOfficeRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\DeleteOfficeSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\DeleteOfficeResponse
      */
 	public function deleteOffice(
         ?\Contractify\ContractifyAPI\Models\Operations\DeleteOfficeRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\DeleteOfficeSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\DeleteOfficeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -105,8 +100,7 @@ class Offices
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -151,12 +145,10 @@ class Offices
      * Get information about an office
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\GetOfficeRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\GetOfficeSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\GetOfficeResponse
      */
 	public function getOffice(
         ?\Contractify\ContractifyAPI\Models\Operations\GetOfficeRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\GetOfficeSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\GetOfficeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -166,8 +158,7 @@ class Offices
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -210,12 +201,10 @@ class Offices
      * List all the offices within a company
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\ListOfficesRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\ListOfficesSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\ListOfficesResponse
      */
 	public function listOffices(
         ?\Contractify\ContractifyAPI\Models\Operations\ListOfficesRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\ListOfficesSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\ListOfficesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -225,8 +214,7 @@ class Offices
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -263,12 +251,10 @@ class Offices
      * Update an office
      * 
      * @param \Contractify\ContractifyAPI\Models\Operations\UpdateOfficeRequest $request
-     * @param \Contractify\ContractifyAPI\Models\Operations\UpdateOfficeSecurity $security
      * @return \Contractify\ContractifyAPI\Models\Operations\UpdateOfficeResponse
      */
 	public function updateOffice(
         ?\Contractify\ContractifyAPI\Models\Operations\UpdateOfficeRequest $request,
-        \Contractify\ContractifyAPI\Models\Operations\UpdateOfficeSecurity $security,
     ): \Contractify\ContractifyAPI\Models\Operations\UpdateOfficeResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -282,8 +268,7 @@ class Offices
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

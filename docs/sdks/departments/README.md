@@ -21,9 +21,9 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\CreateDepartmentRequest;
 use \Contractify\ContractifyAPI\Models\Shared\DepartmentWrite;
-use \Contractify\ContractifyAPI\Models\Operations\CreateDepartmentSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
@@ -32,13 +32,9 @@ try {
     $request = new CreateDepartmentRequest();
     $request->departmentWrite = new DepartmentWrite();
     $request->departmentWrite->name = 'Sales';
-    $request->company = 528895;
+    $request->company = 479977;
 
-    $requestSecurity = new CreateDepartmentSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->departments->createDepartment($request, $requestSecurity);
+    $response = $sdk->departments->createDepartment($request);
 
     if ($response->createDepartment201ApplicationJSONObject !== null) {
         // handle response
@@ -50,10 +46,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\CreateDepartmentRequest](../../models/operations/CreateDepartmentRequest.md)   | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
-| `security`                                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\CreateDepartmentSecurity](../../models/operations/CreateDepartmentSecurity.md) | :heavy_check_mark:                                                                                                            | The security requirements to use for the request.                                                                             |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\CreateDepartmentRequest](../../models/operations/CreateDepartmentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
@@ -74,22 +69,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentRequest;
-use \Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new DeleteDepartmentRequest();
-    $request->company = 479977;
-    $request->department = 568045;
+    $request->company = 568045;
+    $request->department = 392785;
 
-    $requestSecurity = new DeleteDepartmentSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->departments->deleteDepartment($request, $requestSecurity);
+    $response = $sdk->departments->deleteDepartment($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -101,10 +92,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentRequest](../../models/operations/DeleteDepartmentRequest.md)   | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
-| `security`                                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentSecurity](../../models/operations/DeleteDepartmentSecurity.md) | :heavy_check_mark:                                                                                                            | The security requirements to use for the request.                                                                             |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentRequest](../../models/operations/DeleteDepartmentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
@@ -125,22 +115,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\GetDepartmentRequest;
-use \Contractify\ContractifyAPI\Models\Operations\GetDepartmentSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new GetDepartmentRequest();
-    $request->company = 392785;
-    $request->department = 925597;
+    $request->company = 925597;
+    $request->department = 836079;
 
-    $requestSecurity = new GetDepartmentSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->departments->getDepartment($request, $requestSecurity);
+    $response = $sdk->departments->getDepartment($request);
 
     if ($response->getDepartment200ApplicationJSONObject !== null) {
         // handle response
@@ -152,10 +138,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\GetDepartmentRequest](../../models/operations/GetDepartmentRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
-| `security`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\GetDepartmentSecurity](../../models/operations/GetDepartmentSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\GetDepartmentRequest](../../models/operations/GetDepartmentRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
@@ -176,21 +161,17 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\ListDepartmentsRequest;
-use \Contractify\ContractifyAPI\Models\Operations\ListDepartmentsSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new ListDepartmentsRequest();
-    $request->company = 836079;
+    $request->company = 71036;
 
-    $requestSecurity = new ListDepartmentsSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->departments->listDepartments($request, $requestSecurity);
+    $response = $sdk->departments->listDepartments($request);
 
     if ($response->departmentCollection !== null) {
         // handle response
@@ -202,10 +183,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\ListDepartmentsRequest](../../models/operations/ListDepartmentsRequest.md)   | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
-| `security`                                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\ListDepartmentsSecurity](../../models/operations/ListDepartmentsSecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\ListDepartmentsRequest](../../models/operations/ListDepartmentsRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
@@ -226,9 +206,9 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentRequest;
 use \Contractify\ContractifyAPI\Models\Shared\DepartmentWrite;
-use \Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
@@ -237,14 +217,10 @@ try {
     $request = new UpdateDepartmentRequest();
     $request->departmentWrite = new DepartmentWrite();
     $request->departmentWrite->name = 'Sales';
-    $request->company = 71036;
-    $request->department = 337396;
+    $request->company = 337396;
+    $request->department = 87129;
 
-    $requestSecurity = new UpdateDepartmentSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->departments->updateDepartment($request, $requestSecurity);
+    $response = $sdk->departments->updateDepartment($request);
 
     if ($response->updateDepartment200ApplicationJSONObject !== null) {
         // handle response
@@ -256,10 +232,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentRequest](../../models/operations/UpdateDepartmentRequest.md)   | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
-| `security`                                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentSecurity](../../models/operations/UpdateDepartmentSecurity.md) | :heavy_check_mark:                                                                                                            | The security requirements to use for the request.                                                                             |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentRequest](../../models/operations/UpdateDepartmentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response

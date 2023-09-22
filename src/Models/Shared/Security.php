@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace Contractify\ContractifyAPI\Models\Operations;
+namespace Contractify\ContractifyAPI\Models\Shared;
 
 use \Contractify\ContractifyAPI\Utils\SpeakeasyMetadata;
-class ListContractsSecurity
+class Security
 {
 	#[SpeakeasyMetadata('security:scheme=true,type=oauth2,name=Authorization')]
     public string $oAuth2;

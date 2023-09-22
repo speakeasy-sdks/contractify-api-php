@@ -21,9 +21,9 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\CreateOfficeRequest;
 use \Contractify\ContractifyAPI\Models\Shared\OfficeWrite;
-use \Contractify\ContractifyAPI\Models\Operations\CreateOfficeSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
@@ -42,13 +42,9 @@ try {
     $request->officeWrite->phone = '+32 9 234 28 97';
     $request->officeWrite->street = 'Polenstraat 163';
     $request->officeWrite->zip = '9940';
-    $request->company = 520478;
+    $request->company = 780529;
 
-    $requestSecurity = new CreateOfficeSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->offices->createOffice($request, $requestSecurity);
+    $response = $sdk->offices->createOffice($request);
 
     if ($response->createOffice201ApplicationJSONObject !== null) {
         // handle response
@@ -60,10 +56,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\CreateOfficeRequest](../../models/operations/CreateOfficeRequest.md)   | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
-| `security`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\CreateOfficeSecurity](../../models/operations/CreateOfficeSecurity.md) | :heavy_check_mark:                                                                                                    | The security requirements to use for the request.                                                                     |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\CreateOfficeRequest](../../models/operations/CreateOfficeRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
@@ -84,22 +79,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\DeleteOfficeRequest;
-use \Contractify\ContractifyAPI\Models\Operations\DeleteOfficeSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new DeleteOfficeRequest();
-    $request->company = 780529;
-    $request->office = 678880;
+    $request->company = 678880;
+    $request->office = 118274;
 
-    $requestSecurity = new DeleteOfficeSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->offices->deleteOffice($request, $requestSecurity);
+    $response = $sdk->offices->deleteOffice($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -111,10 +102,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\DeleteOfficeRequest](../../models/operations/DeleteOfficeRequest.md)   | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
-| `security`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\DeleteOfficeSecurity](../../models/operations/DeleteOfficeSecurity.md) | :heavy_check_mark:                                                                                                    | The security requirements to use for the request.                                                                     |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\DeleteOfficeRequest](../../models/operations/DeleteOfficeRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
@@ -135,22 +125,18 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\GetOfficeRequest;
-use \Contractify\ContractifyAPI\Models\Operations\GetOfficeSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new GetOfficeRequest();
-    $request->company = 118274;
-    $request->office = 720633;
+    $request->company = 720633;
+    $request->office = 639921;
 
-    $requestSecurity = new GetOfficeSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->offices->getOffice($request, $requestSecurity);
+    $response = $sdk->offices->getOffice($request);
 
     if ($response->getOffice200ApplicationJSONObject !== null) {
         // handle response
@@ -162,10 +148,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\GetOfficeRequest](../../models/operations/GetOfficeRequest.md)   | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
-| `security`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\GetOfficeSecurity](../../models/operations/GetOfficeSecurity.md) | :heavy_check_mark:                                                                                              | The security requirements to use for the request.                                                               |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\GetOfficeRequest](../../models/operations/GetOfficeRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 
 ### Response
@@ -186,21 +171,17 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\ListOfficesRequest;
-use \Contractify\ContractifyAPI\Models\Operations\ListOfficesSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
 
 try {
     $request = new ListOfficesRequest();
-    $request->company = 639921;
+    $request->company = 582020;
 
-    $requestSecurity = new ListOfficesSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->offices->listOffices($request, $requestSecurity);
+    $response = $sdk->offices->listOffices($request);
 
     if ($response->officeCollection !== null) {
         // handle response
@@ -212,10 +193,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\ListOfficesRequest](../../models/operations/ListOfficesRequest.md)   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
-| `security`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\ListOfficesSecurity](../../models/operations/ListOfficesSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\ListOfficesRequest](../../models/operations/ListOfficesRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
@@ -236,9 +216,9 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \Contractify\ContractifyAPI\ContractifyProduction;
+use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\UpdateOfficeRequest;
 use \Contractify\ContractifyAPI\Models\Shared\OfficeWrite;
-use \Contractify\ContractifyAPI\Models\Operations\UpdateOfficeSecurity;
 
 $sdk = ContractifyProduction::builder()
     ->build();
@@ -257,14 +237,10 @@ try {
     $request->officeWrite->phone = '+32 9 234 28 97';
     $request->officeWrite->street = 'Polenstraat 163';
     $request->officeWrite->zip = '9940';
-    $request->company = 582020;
-    $request->office = 143353;
+    $request->company = 143353;
+    $request->office = 537373;
 
-    $requestSecurity = new UpdateOfficeSecurity();
-    $requestSecurity->oAuth2 = '';
-    $requestSecurity->personalAccessToken = '';
-
-    $response = $sdk->offices->updateOffice($request, $requestSecurity);
+    $response = $sdk->offices->updateOffice($request);
 
     if ($response->updateOffice200ApplicationJSONObject !== null) {
         // handle response
@@ -276,10 +252,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\UpdateOfficeRequest](../../models/operations/UpdateOfficeRequest.md)   | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
-| `security`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\UpdateOfficeSecurity](../../models/operations/UpdateOfficeSecurity.md) | :heavy_check_mark:                                                                                                    | The security requirements to use for the request.                                                                     |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\UpdateOfficeRequest](../../models/operations/UpdateOfficeRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
