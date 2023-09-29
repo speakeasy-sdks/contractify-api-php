@@ -16,7 +16,7 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListContractTypesRequest();
-    $request->company = 548814;
+    $request->company = 839467;
 
     $response = $sdk->contractTypes->listContractTypes($request);
 

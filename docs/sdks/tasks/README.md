@@ -1,4 +1,5 @@
 # Tasks
+(*tasks*)
 
 ### Available Operations
 
@@ -43,7 +44,7 @@ try {
     $request->taskWrite->repetitionInterval = 'P1Y';
     $request->taskWrite->status = TaskWriteStatus::Accomplished;
     $request->taskWrite->title = 'My task';
-    $request->company = 216550;
+    $request->company = 296904;
 
     $response = $sdk->tasks->createTask($request);
 
@@ -88,8 +89,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new DeleteTaskRequest();
-    $request->company = 568434;
-    $request->task = 135218;
+    $request->company = 357574;
+    $request->task = 394977;
 
     $response = $sdk->tasks->deleteTask($request);
 
@@ -134,8 +135,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new GetTaskRequest();
-    $request->company = 18789;
-    $request->task = 324141;
+    $request->company = 717011;
+    $request->task = 649018;
 
     $response = $sdk->tasks->getTask($request);
 
@@ -180,8 +181,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListTasksRequest();
-    $request->company = 617636;
-    $request->page = 149675;
+    $request->company = 715197;
+    $request->page = 192941;
 
     $response = $sdk->tasks->listTasks($request);
 
@@ -239,8 +240,8 @@ try {
     $request->taskUpdate->repetitionInterval = 'P1Y';
     $request->taskUpdate->status = TaskUpdateStatus::Accomplished;
     $request->taskUpdate->title = 'My task';
-    $request->company = 612096;
-    $request->task = 222321;
+    $request->company = 449699;
+    $request->task = 675064;
 
     $response = $sdk->tasks->updateTask($request);
 

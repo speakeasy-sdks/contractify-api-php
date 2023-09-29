@@ -1,4 +1,5 @@
 # Offices
+(*offices*)
 
 ### Available Operations
 
@@ -42,7 +43,7 @@ try {
     $request->officeWrite->phone = '+32 9 234 28 97';
     $request->officeWrite->street = 'Polenstraat 163';
     $request->officeWrite->zip = '9940';
-    $request->company = 780529;
+    $request->company = 244393;
 
     $response = $sdk->offices->createOffice($request);
 
@@ -87,8 +88,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new DeleteOfficeRequest();
-    $request->company = 678880;
-    $request->office = 118274;
+    $request->company = 327183;
+    $request->office = 668605;
 
     $response = $sdk->offices->deleteOffice($request);
 
@@ -133,8 +134,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new GetOfficeRequest();
-    $request->company = 720633;
-    $request->office = 639921;
+    $request->company = 616050;
+    $request->office = 134885;
 
     $response = $sdk->offices->getOffice($request);
 
@@ -179,7 +180,7 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListOfficesRequest();
-    $request->company = 582020;
+    $request->company = 303557;
 
     $response = $sdk->offices->listOffices($request);
 
@@ -237,8 +238,8 @@ try {
     $request->officeWrite->phone = '+32 9 234 28 97';
     $request->officeWrite->street = 'Polenstraat 163';
     $request->officeWrite->zip = '9940';
-    $request->company = 143353;
-    $request->office = 537373;
+    $request->company = 989026;
+    $request->office = 647378;
 
     $response = $sdk->offices->updateOffice($request);
 

@@ -1,4 +1,5 @@
 # ContractTypes
+(*contractTypes*)
 
 ### Available Operations
 
@@ -25,7 +26,7 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListContractTypesRequest();
-    $request->company = 715190;
+    $request->company = 839467;
 
     $response = $sdk->contractTypes->listContractTypes($request);
 

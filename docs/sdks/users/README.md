@@ -1,4 +1,5 @@
 # Users
+(*users*)
 
 ### Available Operations
 
@@ -61,8 +62,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListUsersRequest();
-    $request->company = 616934;
-    $request->page = 386489;
+    $request->company = 606239;
+    $request->page = 283983;
 
     $response = $sdk->users->listUsers($request);
 

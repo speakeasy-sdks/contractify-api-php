@@ -1,4 +1,5 @@
 # Departments
+(*departments*)
 
 ### Available Operations
 
@@ -32,7 +33,7 @@ try {
     $request = new CreateDepartmentRequest();
     $request->departmentWrite = new DepartmentWrite();
     $request->departmentWrite->name = 'Sales';
-    $request->company = 479977;
+    $request->company = 33324;
 
     $response = $sdk->departments->createDepartment($request);
 
@@ -77,8 +78,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new DeleteDepartmentRequest();
-    $request->company = 568045;
-    $request->department = 392785;
+    $request->company = 701942;
+    $request->department = 751163;
 
     $response = $sdk->departments->deleteDepartment($request);
 
@@ -123,8 +124,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new GetDepartmentRequest();
-    $request->company = 925597;
-    $request->department = 836079;
+    $request->company = 255130;
+    $request->department = 855529;
 
     $response = $sdk->departments->getDepartment($request);
 
@@ -169,7 +170,7 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListDepartmentsRequest();
-    $request->company = 71036;
+    $request->company = 117069;
 
     $response = $sdk->departments->listDepartments($request);
 
@@ -217,8 +218,8 @@ try {
     $request = new UpdateDepartmentRequest();
     $request->departmentWrite = new DepartmentWrite();
     $request->departmentWrite->name = 'Sales';
-    $request->company = 337396;
-    $request->department = 87129;
+    $request->company = 431122;
+    $request->department = 2342;
 
     $response = $sdk->departments->updateDepartment($request);
 

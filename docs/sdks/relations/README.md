@@ -1,4 +1,5 @@
 # Relations
+(*relations*)
 
 ### Available Operations
 
@@ -46,7 +47,7 @@ try {
     $request->relationWrite->reference = 'REF123';
     $request->relationWrite->vat = 'BE12345678';
     $request->relationWrite->website = 'https://www.example.org';
-    $request->company = 944669;
+    $request->company = 528070;
 
     $response = $sdk->relations->createRelation($request);
 
@@ -91,8 +92,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new DeleteRelationRequest();
-    $request->company = 758616;
-    $request->relation = 521848;
+    $request->company = 773418;
+    $request->relation = 890630;
 
     $response = $sdk->relations->deleteRelation($request);
 
@@ -137,8 +138,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new GetRelationRequest();
-    $request->company = 105907;
-    $request->relation = 414662;
+    $request->company = 734058;
+    $request->relation = 979643;
 
     $response = $sdk->relations->getRelation($request);
 
@@ -183,9 +184,9 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListRelationsRequest();
-    $request->company = 473600;
-    $request->page = 264555;
-    $request->reference = 'qui';
+    $request->company = 454135;
+    $request->page = 761434;
+    $request->reference = 'systemic South';
 
     $response = $sdk->relations->listRelations($request);
 
@@ -247,8 +248,8 @@ try {
     $request->relationWrite->reference = 'REF123';
     $request->relationWrite->vat = 'BE12345678';
     $request->relationWrite->website = 'https://www.example.org';
-    $request->company = 774234;
-    $request->relation = 736918;
+    $request->company = 573397;
+    $request->relation = 281147;
 
     $response = $sdk->relations->updateRelation($request);
 

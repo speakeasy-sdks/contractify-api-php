@@ -1,4 +1,5 @@
 # Contracts
+(*contracts*)
 
 ### Available Operations
 
@@ -37,13 +38,13 @@ try {
     $request = new CreateContractRequest();
     $request->contractWrite = new ContractWrite();
     $request->contractWrite->contractTypes = [
-        844266,
+        940947,
     ];
     $request->contractWrite->customFieldValues = [
         new CustomFieldValueWrite(),
     ];
     $request->contractWrite->departments = [
-        602763,
+        426077,
     ];
     $request->contractWrite->documents = [
         1,
@@ -53,16 +54,16 @@ try {
     $request->contractWrite->endDate = DateTime::createFromFormat('Y-m-d', '2021-12-31');
     $request->contractWrite->isOpenEnded = false;
     $request->contractWrite->legalEntities = [
-        857946,
+        946586,
     ];
     $request->contractWrite->name = 'Partnership agreement';
     $request->contractWrite->offices = [
-        544883,
+        559447,
     ];
     $request->contractWrite->ownerId = 1;
     $request->contractWrite->phase = ContractPhase::Ongoing;
     $request->contractWrite->relations = [
-        847252,
+        657681,
     ];
     $request->contractWrite->renewal = new ContractRenewal();
     $request->contractWrite->renewal->automaticRenewal = new ContractAutomaticRenewal();
@@ -74,7 +75,7 @@ try {
     $request->contractWrite->termination->isTerminableAtAnyTime = false;
     $request->contractWrite->termination->terminationDate = DateTime::createFromFormat('Y-m-d', '2021-11-30');
     $request->contractWrite->termination->terminationDuration = 'P1M';
-    $request->company = 423655;
+    $request->company = 410255;
 
     $response = $sdk->contracts->createContract($request);
 
@@ -119,8 +120,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new DeleteContractRequest();
-    $request->company = 623564;
-    $request->contract = 645894;
+    $request->company = 791005;
+    $request->contract = 200974;
 
     $response = $sdk->contracts->deleteContract($request);
 
@@ -165,8 +166,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new GetContractRequest();
-    $request->company = 384382;
-    $request->contract = 437587;
+    $request->company = 362495;
+    $request->contract = 163842;
 
     $response = $sdk->contracts->getContract($request);
 
@@ -211,8 +212,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListContractsRequest();
-    $request->company = 297534;
-    $request->page = 891773;
+    $request->company = 567515;
+    $request->page = 62076;
 
     $response = $sdk->contracts->listContracts($request);
 
@@ -265,13 +266,13 @@ try {
     $request = new UpdateContractRequest();
     $request->contractWrite = new ContractWrite();
     $request->contractWrite->contractTypes = [
-        56713,
+        60280,
     ];
     $request->contractWrite->customFieldValues = [
         new CustomFieldValueWrite(),
     ];
     $request->contractWrite->departments = [
-        963663,
+        331790,
     ];
     $request->contractWrite->documents = [
         1,
@@ -281,16 +282,16 @@ try {
     $request->contractWrite->endDate = DateTime::createFromFormat('Y-m-d', '2021-12-31');
     $request->contractWrite->isOpenEnded = false;
     $request->contractWrite->legalEntities = [
-        272656,
+        13295,
     ];
     $request->contractWrite->name = 'Partnership agreement';
     $request->contractWrite->offices = [
-        383441,
+        178046,
     ];
     $request->contractWrite->ownerId = 1;
     $request->contractWrite->phase = ContractPhase::Ongoing;
     $request->contractWrite->relations = [
-        477665,
+        331597,
     ];
     $request->contractWrite->renewal = new ContractRenewal();
     $request->contractWrite->renewal->automaticRenewal = new ContractAutomaticRenewal();
@@ -302,8 +303,8 @@ try {
     $request->contractWrite->termination->isTerminableAtAnyTime = false;
     $request->contractWrite->termination->terminationDate = DateTime::createFromFormat('Y-m-d', '2021-11-30');
     $request->contractWrite->termination->terminationDuration = 'P1M';
-    $request->company = 791725;
-    $request->contract = 812169;
+    $request->company = 693387;
+    $request->contract = 670029;
 
     $response = $sdk->contracts->updateContract($request);
 

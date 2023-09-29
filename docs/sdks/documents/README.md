@@ -1,4 +1,5 @@
 # Documents
+(*documents*)
 
 ### Available Operations
 
@@ -28,8 +29,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new DeleteDocumentRequest();
-    $request->company = 648172;
-    $request->document = 20218;
+    $request->company = 431806;
+    $request->document = 379848;
 
     $response = $sdk->documents->deleteDocument($request);
 
@@ -74,8 +75,8 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new GetDocumentRequest();
-    $request->company = 368241;
-    $request->document = 832620;
+    $request->company = 67810;
+    $request->document = 267106;
 
     $response = $sdk->documents->getDocument($request);
 
@@ -121,12 +122,12 @@ $sdk = ContractifyProduction::builder()
 
 try {
     $request = new ListDocumentsRequest();
-    $request->company = 957156;
-    $request->esigningStatus = ListDocumentsEsigningStatus::FinishedButPartiallySigned;
-    $request->esigningUpdatedAfter = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-02-17T10:41:36.857Z');
-    $request->page = 870088;
-    $request->relationId = 978619;
-    $request->signedAfter = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-15T07:22:15.330Z');
+    $request->company = 581480;
+    $request->esigningStatus = ListDocumentsEsigningStatus::LegalDeclined;
+    $request->esigningUpdatedAfter = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-10T07:42:42.736Z');
+    $request->page = 893340;
+    $request->relationId = 873217;
+    $request->signedAfter = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-10T09:49:45.540Z');
 
     $response = $sdk->documents->listDocuments($request);
 
@@ -186,8 +187,8 @@ try {
     ];
     $request->documentWrite->name = 'filename.pdf';
     $request->documentWrite->ownerId = 1;
-    $request->company = 800911;
-    $request->document = 461479;
+    $request->company = 653381;
+    $request->document = 312704;
 
     $response = $sdk->documents->updateDocument($request);
 
