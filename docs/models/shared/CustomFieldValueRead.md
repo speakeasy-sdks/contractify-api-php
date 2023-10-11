@@ -7,4 +7,4 @@
 | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
 | `customFieldId`    | *?int*             | :heavy_minus_sign: | N/A                | 2                  |
 | `id`               | *?int*             | :heavy_minus_sign: | N/A                | 1                  |
-| `value`            | *mixed*            | :heavy_minus_sign: | N/A                |                    |
+| `value`            | *mixed*            | :heavy_minus_sign: | N/A                | software           |

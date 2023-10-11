@@ -27,7 +27,12 @@ use \Contractify\ContractifyAPI\Models\Operations\CreateRelationRequest;
 use \Contractify\ContractifyAPI\Models\Shared\RelationWrite;
 use \Contractify\ContractifyAPI\Models\Shared\Address;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -87,7 +92,12 @@ use \Contractify\ContractifyAPI\ContractifyProduction;
 use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\DeleteRelationRequest;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -133,7 +143,12 @@ use \Contractify\ContractifyAPI\ContractifyProduction;
 use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\GetRelationRequest;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -179,7 +194,12 @@ use \Contractify\ContractifyAPI\ContractifyProduction;
 use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\ListRelationsRequest;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -228,7 +248,12 @@ use \Contractify\ContractifyAPI\Models\Operations\UpdateRelationRequest;
 use \Contractify\ContractifyAPI\Models\Shared\RelationWrite;
 use \Contractify\ContractifyAPI\Models\Shared\Address;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

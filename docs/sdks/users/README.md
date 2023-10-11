@@ -21,7 +21,12 @@ require_once 'vendor/autoload.php';
 use \Contractify\ContractifyAPI\ContractifyProduction;
 use \Contractify\ContractifyAPI\Models\Shared\Security;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -57,7 +62,12 @@ use \Contractify\ContractifyAPI\ContractifyProduction;
 use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\ListUsersRequest;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

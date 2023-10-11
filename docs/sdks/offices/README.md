@@ -26,7 +26,12 @@ use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\CreateOfficeRequest;
 use \Contractify\ContractifyAPI\Models\Shared\OfficeWrite;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -83,7 +88,12 @@ use \Contractify\ContractifyAPI\ContractifyProduction;
 use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\DeleteOfficeRequest;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -129,7 +139,12 @@ use \Contractify\ContractifyAPI\ContractifyProduction;
 use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\GetOfficeRequest;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -175,7 +190,12 @@ use \Contractify\ContractifyAPI\ContractifyProduction;
 use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\ListOfficesRequest;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -221,7 +241,12 @@ use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\UpdateOfficeRequest;
 use \Contractify\ContractifyAPI\Models\Shared\OfficeWrite;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

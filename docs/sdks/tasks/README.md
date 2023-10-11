@@ -28,7 +28,12 @@ use \Contractify\ContractifyAPI\Models\Shared\TaskWrite;
 use \Contractify\ContractifyAPI\Models\Shared\TaskWriteDueDateDependsOn;
 use \Contractify\ContractifyAPI\Models\Shared\TaskWriteStatus;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -84,7 +89,12 @@ use \Contractify\ContractifyAPI\ContractifyProduction;
 use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\DeleteTaskRequest;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -130,7 +140,12 @@ use \Contractify\ContractifyAPI\ContractifyProduction;
 use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\GetTaskRequest;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -176,7 +191,12 @@ use \Contractify\ContractifyAPI\ContractifyProduction;
 use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\ListTasksRequest;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -225,7 +245,12 @@ use \Contractify\ContractifyAPI\Models\Shared\TaskUpdate;
 use \Contractify\ContractifyAPI\Models\Shared\TaskUpdateDueDateDependsOn;
 use \Contractify\ContractifyAPI\Models\Shared\TaskUpdateStatus;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

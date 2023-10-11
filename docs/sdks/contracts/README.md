@@ -31,7 +31,12 @@ use \Contractify\ContractifyAPI\Models\Shared\ContractRenewal;
 use \Contractify\ContractifyAPI\Models\Shared\ContractAutomaticRenewal;
 use \Contractify\ContractifyAPI\Models\Shared\ContractTermination;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -115,7 +120,12 @@ use \Contractify\ContractifyAPI\ContractifyProduction;
 use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\DeleteContractRequest;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -161,7 +171,12 @@ use \Contractify\ContractifyAPI\ContractifyProduction;
 use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\GetContractRequest;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -207,7 +222,12 @@ use \Contractify\ContractifyAPI\ContractifyProduction;
 use \Contractify\ContractifyAPI\Models\Shared\Security;
 use \Contractify\ContractifyAPI\Models\Operations\ListContractsRequest;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -259,7 +279,12 @@ use \Contractify\ContractifyAPI\Models\Shared\ContractRenewal;
 use \Contractify\ContractifyAPI\Models\Shared\ContractAutomaticRenewal;
 use \Contractify\ContractifyAPI\Models\Shared\ContractTermination;
 
+$security = new Security();
+$security->oAuth2 = '';
+$security->personalAccessToken = '';
+
 $sdk = ContractifyProduction::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
