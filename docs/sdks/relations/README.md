@@ -206,7 +206,7 @@ try {
     $request = new ListRelationsRequest();
     $request->company = 454135;
     $request->page = 761434;
-    $request->reference = 'systemic South';
+    $request->reference = 'string';
 
     $response = $sdk->relations->listRelations($request);
 
