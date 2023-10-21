@@ -1,0 +1,18 @@
+# OfficeWrite
+
+
+## Fields
+
+| Field               | Type                | Required            | Description         | Example             |
+| ------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
+| `bus`               | *?string*           | :heavy_minus_sign:  | N/A                 | 1                   |
+| `city`              | *?string*           | :heavy_minus_sign:  | N/A                 | Sleidinge           |
+| `contactPerson`     | *?string*           | :heavy_minus_sign:  | N/A                 | Ada Lovelace        |
+| `country`           | *?string*           | :heavy_minus_sign:  | N/A                 | Belgium             |
+| `email`             | *?string*           | :heavy_minus_sign:  | N/A                 | info@contractify.be |
+| `id`                | *?int*              | :heavy_minus_sign:  | N/A                 | 1                   |
+| `name`              | *?string*           | :heavy_minus_sign:  | N/A                 | Ghent               |
+| `numberIdentity`    | *?string*           | :heavy_minus_sign:  | N/A                 | OFF-GHENT           |
+| `phone`             | *?string*           | :heavy_minus_sign:  | N/A                 | +32 9 234 28 97     |
+| `street`            | *?string*           | :heavy_minus_sign:  | N/A                 | Polenstraat 163     |
+| `zip`               | *?string*           | :heavy_minus_sign:  | N/A                 | 9940                |

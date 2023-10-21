@@ -1,0 +1,10 @@
+# UpdateTaskRequest
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `taskUpdate`                                                                               | [?\Contractify\ContractifyAPI\Models\Shared\TaskUpdate](../../models/shared/TaskUpdate.md) | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `company`                                                                                  | *int*                                                                                      | :heavy_check_mark:                                                                         | Id of the company                                                                          |
+| `task`                                                                                     | *int*                                                                                      | :heavy_check_mark:                                                                         | Id of the task                                                                             |
