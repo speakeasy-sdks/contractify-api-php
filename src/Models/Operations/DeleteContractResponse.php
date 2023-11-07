@@ -12,6 +12,38 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class DeleteContractResponse
 {
     /**
+     * Precondition failed
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteContractResponseBody $fourHundredApplicationJsonObject
+     */
+	
+    public ?DeleteContractResponseBody $fourHundredApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteContractContractsResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?DeleteContractContractsResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteContractContractsResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?DeleteContractContractsResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Not Found
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteContractContractsResponse404ResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?DeleteContractContractsResponse404ResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,46 +67,14 @@ class DeleteContractResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * Precondition failed
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteContract400ApplicationJSON $deleteContract400ApplicationJSONObject
-     */
-	
-    public ?DeleteContract400ApplicationJSON $deleteContract400ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteContract401ApplicationJSON $deleteContract401ApplicationJSONObject
-     */
-	
-    public ?DeleteContract401ApplicationJSON $deleteContract401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteContract403ApplicationJSON $deleteContract403ApplicationJSONObject
-     */
-	
-    public ?DeleteContract403ApplicationJSON $deleteContract403ApplicationJSONObject = null;
-    
-    /**
-     * Not Found
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteContract404ApplicationJSON $deleteContract404ApplicationJSONObject
-     */
-	
-    public ?DeleteContract404ApplicationJSON $deleteContract404ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->deleteContract400ApplicationJSONObject = null;
-		$this->deleteContract401ApplicationJSONObject = null;
-		$this->deleteContract403ApplicationJSONObject = null;
-		$this->deleteContract404ApplicationJSONObject = null;
 	}
 }

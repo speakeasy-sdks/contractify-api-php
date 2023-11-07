@@ -12,6 +12,38 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class DeleteRelationResponse
 {
     /**
+     * Precondition failed
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteRelationResponseBody $fourHundredApplicationJsonObject
+     */
+	
+    public ?DeleteRelationResponseBody $fourHundredApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteRelationRelationsResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?DeleteRelationRelationsResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteRelationRelationsResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?DeleteRelationRelationsResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Not Found
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteRelationRelationsResponse404ResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?DeleteRelationRelationsResponse404ResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,46 +67,14 @@ class DeleteRelationResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * Precondition failed
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteRelation400ApplicationJSON $deleteRelation400ApplicationJSONObject
-     */
-	
-    public ?DeleteRelation400ApplicationJSON $deleteRelation400ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteRelation401ApplicationJSON $deleteRelation401ApplicationJSONObject
-     */
-	
-    public ?DeleteRelation401ApplicationJSON $deleteRelation401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteRelation403ApplicationJSON $deleteRelation403ApplicationJSONObject
-     */
-	
-    public ?DeleteRelation403ApplicationJSON $deleteRelation403ApplicationJSONObject = null;
-    
-    /**
-     * Not Found
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteRelation404ApplicationJSON $deleteRelation404ApplicationJSONObject
-     */
-	
-    public ?DeleteRelation404ApplicationJSON $deleteRelation404ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->deleteRelation400ApplicationJSONObject = null;
-		$this->deleteRelation401ApplicationJSONObject = null;
-		$this->deleteRelation403ApplicationJSONObject = null;
-		$this->deleteRelation404ApplicationJSONObject = null;
 	}
 }

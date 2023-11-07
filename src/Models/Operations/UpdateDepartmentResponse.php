@@ -12,6 +12,46 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class UpdateDepartmentResponse
 {
     /**
+     * OK
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentResponseBody $twoHundredApplicationJsonObject
+     */
+	
+    public ?UpdateDepartmentResponseBody $twoHundredApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentDepartmentsResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?UpdateDepartmentDepartmentsResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentDepartmentsResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?UpdateDepartmentDepartmentsResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Not Found
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentDepartmentsResponse404ResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?UpdateDepartmentDepartmentsResponse404ResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
+     * Invalid data posted
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentDepartmentsResponse422ResponseBody $fourHundredAndTwentyTwoApplicationJsonObject
+     */
+	
+    public ?UpdateDepartmentDepartmentsResponse422ResponseBody $fourHundredAndTwentyTwoApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,55 +75,15 @@ class UpdateDepartmentResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * OK
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDepartment200ApplicationJSON $updateDepartment200ApplicationJSONObject
-     */
-	
-    public ?UpdateDepartment200ApplicationJSON $updateDepartment200ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDepartment401ApplicationJSON $updateDepartment401ApplicationJSONObject
-     */
-	
-    public ?UpdateDepartment401ApplicationJSON $updateDepartment401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDepartment403ApplicationJSON $updateDepartment403ApplicationJSONObject
-     */
-	
-    public ?UpdateDepartment403ApplicationJSON $updateDepartment403ApplicationJSONObject = null;
-    
-    /**
-     * Not Found
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDepartment404ApplicationJSON $updateDepartment404ApplicationJSONObject
-     */
-	
-    public ?UpdateDepartment404ApplicationJSON $updateDepartment404ApplicationJSONObject = null;
-    
-    /**
-     * Invalid data posted
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDepartment422ApplicationJSON $updateDepartment422ApplicationJSONObject
-     */
-	
-    public ?UpdateDepartment422ApplicationJSON $updateDepartment422ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
+		$this->fourHundredAndTwentyTwoApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->updateDepartment200ApplicationJSONObject = null;
-		$this->updateDepartment401ApplicationJSONObject = null;
-		$this->updateDepartment403ApplicationJSONObject = null;
-		$this->updateDepartment404ApplicationJSONObject = null;
-		$this->updateDepartment422ApplicationJSONObject = null;
 	}
 }

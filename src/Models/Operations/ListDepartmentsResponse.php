@@ -12,6 +12,22 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class ListDepartmentsResponse
 {
     /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListDepartmentsResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?ListDepartmentsResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListDepartmentsDepartmentsResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?ListDepartmentsDepartmentsResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -43,29 +59,13 @@ class ListDepartmentsResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListDepartments401ApplicationJSON $listDepartments401ApplicationJSONObject
-     */
-	
-    public ?ListDepartments401ApplicationJSON $listDepartments401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListDepartments403ApplicationJSON $listDepartments403ApplicationJSONObject
-     */
-	
-    public ?ListDepartments403ApplicationJSON $listDepartments403ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->departmentCollection = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->listDepartments401ApplicationJSONObject = null;
-		$this->listDepartments403ApplicationJSONObject = null;
 	}
 }

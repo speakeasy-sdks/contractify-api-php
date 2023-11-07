@@ -48,33 +48,35 @@ class Relations
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \Contractify\ContractifyAPI\Models\Operations\CreateRelationResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
         if ($httpResponse->getStatusCode() === 201) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->createRelation201ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\CreateRelation201ApplicationJSON', 'json');
+                $response->twoHundredAndOneApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\CreateRelationResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->createRelation401ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\CreateRelation401ApplicationJSON', 'json');
+                $response->fourHundredAndOneApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\CreateRelationRelationsResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->createRelation403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\CreateRelation403ApplicationJSON', 'json');
+                $response->fourHundredAndThreeApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\CreateRelationRelationsResponseResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 422) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->createRelation422ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\CreateRelation422ApplicationJSON', 'json');
+                $response->fourHundredAndTwentyTwoApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\CreateRelationRelationsResponse422ResponseBody', 'json');
             }
         }
 
@@ -104,8 +106,10 @@ class Relations
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \Contractify\ContractifyAPI\Models\Operations\DeleteRelationResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -114,25 +118,25 @@ class Relations
         else if ($httpResponse->getStatusCode() === 400) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->deleteRelation400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\DeleteRelation400ApplicationJSON', 'json');
+                $response->fourHundredApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\DeleteRelationResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->deleteRelation401ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\DeleteRelation401ApplicationJSON', 'json');
+                $response->fourHundredAndOneApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\DeleteRelationRelationsResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->deleteRelation403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\DeleteRelation403ApplicationJSON', 'json');
+                $response->fourHundredAndThreeApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\DeleteRelationRelationsResponseResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->deleteRelation404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\DeleteRelation404ApplicationJSON', 'json');
+                $response->fourHundredAndFourApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\DeleteRelationRelationsResponse404ResponseBody', 'json');
             }
         }
 
@@ -162,33 +166,35 @@ class Relations
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \Contractify\ContractifyAPI\Models\Operations\GetRelationResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getRelation200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\GetRelation200ApplicationJSON', 'json');
+                $response->twoHundredApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\GetRelationResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getRelation401ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\GetRelation401ApplicationJSON', 'json');
+                $response->fourHundredAndOneApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\GetRelationRelationsResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getRelation403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\GetRelation403ApplicationJSON', 'json');
+                $response->fourHundredAndThreeApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\GetRelationRelationsResponseResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getRelation404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\GetRelation404ApplicationJSON', 'json');
+                $response->fourHundredAndFourApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\GetRelationRelationsResponse404ResponseBody', 'json');
             }
         }
 
@@ -219,8 +225,10 @@ class Relations
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \Contractify\ContractifyAPI\Models\Operations\ListRelationsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -233,13 +241,13 @@ class Relations
         else if ($httpResponse->getStatusCode() === 401) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->listRelations401ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\ListRelations401ApplicationJSON', 'json');
+                $response->fourHundredAndOneApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\ListRelationsResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->listRelations403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\ListRelations403ApplicationJSON', 'json');
+                $response->fourHundredAndThreeApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\ListRelationsRelationsResponseBody', 'json');
             }
         }
 
@@ -273,39 +281,41 @@ class Relations
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \Contractify\ContractifyAPI\Models\Operations\UpdateRelationResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->updateRelation200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\UpdateRelation200ApplicationJSON', 'json');
+                $response->twoHundredApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\UpdateRelationResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->updateRelation401ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\UpdateRelation401ApplicationJSON', 'json');
+                $response->fourHundredAndOneApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\UpdateRelationRelationsResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->updateRelation403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\UpdateRelation403ApplicationJSON', 'json');
+                $response->fourHundredAndThreeApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\UpdateRelationRelationsResponseResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->updateRelation404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\UpdateRelation404ApplicationJSON', 'json');
+                $response->fourHundredAndFourApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\UpdateRelationRelationsResponse404ResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 422) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->updateRelation422ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\UpdateRelation422ApplicationJSON', 'json');
+                $response->fourHundredAndTwentyTwoApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\UpdateRelationRelationsResponse422ResponseBody', 'json');
             }
         }
 

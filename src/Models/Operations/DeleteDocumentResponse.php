@@ -12,6 +12,38 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class DeleteDocumentResponse
 {
     /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDocumentResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?DeleteDocumentResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDocumentDocumentsResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?DeleteDocumentDocumentsResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Not Found
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDocumentDocumentsResponseResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?DeleteDocumentDocumentsResponseResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
+     * Invalid data posted
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDocumentDocumentsResponse422ResponseBody $fourHundredAndTwentyTwoApplicationJsonObject
+     */
+	
+    public ?DeleteDocumentDocumentsResponse422ResponseBody $fourHundredAndTwentyTwoApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,46 +67,14 @@ class DeleteDocumentResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDocument401ApplicationJSON $deleteDocument401ApplicationJSONObject
-     */
-	
-    public ?DeleteDocument401ApplicationJSON $deleteDocument401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDocument403ApplicationJSON $deleteDocument403ApplicationJSONObject
-     */
-	
-    public ?DeleteDocument403ApplicationJSON $deleteDocument403ApplicationJSONObject = null;
-    
-    /**
-     * Not Found
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDocument404ApplicationJSON $deleteDocument404ApplicationJSONObject
-     */
-	
-    public ?DeleteDocument404ApplicationJSON $deleteDocument404ApplicationJSONObject = null;
-    
-    /**
-     * Invalid data posted
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDocument422ApplicationJSON $deleteDocument422ApplicationJSONObject
-     */
-	
-    public ?DeleteDocument422ApplicationJSON $deleteDocument422ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
+		$this->fourHundredAndTwentyTwoApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->deleteDocument401ApplicationJSONObject = null;
-		$this->deleteDocument403ApplicationJSONObject = null;
-		$this->deleteDocument404ApplicationJSONObject = null;
-		$this->deleteDocument422ApplicationJSONObject = null;
 	}
 }

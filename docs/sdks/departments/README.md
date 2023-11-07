@@ -1,5 +1,5 @@
 # Departments
-(*departments*)
+
 
 ### Available Operations
 
@@ -21,28 +21,27 @@ Create a department
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\CreateDepartmentRequest;
-use \Contractify\ContractifyAPI\Models\Shared\DepartmentWrite;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateDepartmentRequest();
-    $request->departmentWrite = new DepartmentWrite();
+    $request = new Operations\CreateDepartmentRequest();
+    $request->departmentWrite = new Shared\DepartmentWrite();
     $request->departmentWrite->name = 'Sales';
     $request->company = 33324;
 
     $response = $sdk->departments->createDepartment($request);
 
-    if ($response->createDepartment201ApplicationJSONObject !== null) {
+    if ($response->twoHundredAndOneApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -74,20 +73,20 @@ Delete a department
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteDepartmentRequest();
+    $request = new Operations\DeleteDepartmentRequest();
     $request->company = 701942;
     $request->department = 751163;
 
@@ -125,26 +124,26 @@ Get information about a department
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\GetDepartmentRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetDepartmentRequest();
+    $request = new Operations\GetDepartmentRequest();
     $request->company = 255130;
     $request->department = 855529;
 
     $response = $sdk->departments->getDepartment($request);
 
-    if ($response->getDepartment200ApplicationJSONObject !== null) {
+    if ($response->twoHundredApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -176,20 +175,20 @@ List all the departments within a company
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\ListDepartmentsRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListDepartmentsRequest();
+    $request = new Operations\ListDepartmentsRequest();
     $request->company = 117069;
 
     $response = $sdk->departments->listDepartments($request);
@@ -226,29 +225,28 @@ Update a department
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentRequest;
-use \Contractify\ContractifyAPI\Models\Shared\DepartmentWrite;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateDepartmentRequest();
-    $request->departmentWrite = new DepartmentWrite();
+    $request = new Operations\UpdateDepartmentRequest();
+    $request->departmentWrite = new Shared\DepartmentWrite();
     $request->departmentWrite->name = 'Sales';
     $request->company = 431122;
     $request->department = 2342;
 
     $response = $sdk->departments->updateDepartment($request);
 
-    if ($response->updateDepartment200ApplicationJSONObject !== null) {
+    if ($response->twoHundredApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {

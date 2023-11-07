@@ -12,6 +12,38 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class CreateOfficeResponse
 {
     /**
+     * Created
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateOfficeResponseBody $twoHundredAndOneApplicationJsonObject
+     */
+	
+    public ?CreateOfficeResponseBody $twoHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateOfficeOfficesResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?CreateOfficeOfficesResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateOfficeOfficesResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?CreateOfficeOfficesResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Invalid data posted
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateOfficeOfficesResponse422ResponseBody $fourHundredAndTwentyTwoApplicationJsonObject
+     */
+	
+    public ?CreateOfficeOfficesResponse422ResponseBody $fourHundredAndTwentyTwoApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,46 +67,14 @@ class CreateOfficeResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * Created
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateOffice201ApplicationJSON $createOffice201ApplicationJSONObject
-     */
-	
-    public ?CreateOffice201ApplicationJSON $createOffice201ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateOffice401ApplicationJSON $createOffice401ApplicationJSONObject
-     */
-	
-    public ?CreateOffice401ApplicationJSON $createOffice401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateOffice403ApplicationJSON $createOffice403ApplicationJSONObject
-     */
-	
-    public ?CreateOffice403ApplicationJSON $createOffice403ApplicationJSONObject = null;
-    
-    /**
-     * Invalid data posted
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateOffice422ApplicationJSON $createOffice422ApplicationJSONObject
-     */
-	
-    public ?CreateOffice422ApplicationJSON $createOffice422ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndTwentyTwoApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->createOffice201ApplicationJSONObject = null;
-		$this->createOffice401ApplicationJSONObject = null;
-		$this->createOffice403ApplicationJSONObject = null;
-		$this->createOffice422ApplicationJSONObject = null;
 	}
 }

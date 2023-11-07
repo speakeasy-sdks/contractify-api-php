@@ -12,6 +12,22 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class ListContractsResponse
 {
     /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListContractsResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?ListContractsResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListContractsContractsResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?ListContractsContractsResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -43,29 +59,13 @@ class ListContractsResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListContracts401ApplicationJSON $listContracts401ApplicationJSONObject
-     */
-	
-    public ?ListContracts401ApplicationJSON $listContracts401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListContracts403ApplicationJSON $listContracts403ApplicationJSONObject
-     */
-	
-    public ?ListContracts403ApplicationJSON $listContracts403ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->contractCollection = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->listContracts401ApplicationJSONObject = null;
-		$this->listContracts403ApplicationJSONObject = null;
 	}
 }

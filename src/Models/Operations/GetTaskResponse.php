@@ -12,6 +12,38 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class GetTaskResponse
 {
     /**
+     * OK
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetTaskResponseBody $twoHundredApplicationJsonObject
+     */
+	
+    public ?GetTaskResponseBody $twoHundredApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetTaskTasksResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?GetTaskTasksResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetTaskTasksResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?GetTaskTasksResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Not Found
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetTaskTasksResponse404ResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?GetTaskTasksResponse404ResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,46 +67,14 @@ class GetTaskResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * OK
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetTask200ApplicationJSON $getTask200ApplicationJSONObject
-     */
-	
-    public ?GetTask200ApplicationJSON $getTask200ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetTask401ApplicationJSON $getTask401ApplicationJSONObject
-     */
-	
-    public ?GetTask401ApplicationJSON $getTask401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetTask403ApplicationJSON $getTask403ApplicationJSONObject
-     */
-	
-    public ?GetTask403ApplicationJSON $getTask403ApplicationJSONObject = null;
-    
-    /**
-     * Not Found
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetTask404ApplicationJSON $getTask404ApplicationJSONObject
-     */
-	
-    public ?GetTask404ApplicationJSON $getTask404ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->getTask200ApplicationJSONObject = null;
-		$this->getTask401ApplicationJSONObject = null;
-		$this->getTask403ApplicationJSONObject = null;
-		$this->getTask404ApplicationJSONObject = null;
 	}
 }

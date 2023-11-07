@@ -1,5 +1,5 @@
 # CustomFields
-(*customFields*)
+
 
 ### Available Operations
 
@@ -17,20 +17,20 @@ List all the custom fields within a company
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListCustomFieldsRequest();
+    $request = new Operations\ListCustomFieldsRequest();
     $request->company = 318971;
 
     $response = $sdk->customFields->listCustomFields($request);

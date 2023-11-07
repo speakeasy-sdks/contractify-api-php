@@ -12,6 +12,22 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class ListLegalEntitiesResponse
 {
     /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?ListLegalEntitiesResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesLegalEntitiesResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?ListLegalEntitiesLegalEntitiesResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -43,29 +59,13 @@ class ListLegalEntitiesResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListLegalEntities401ApplicationJSON $listLegalEntities401ApplicationJSONObject
-     */
-	
-    public ?ListLegalEntities401ApplicationJSON $listLegalEntities401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListLegalEntities403ApplicationJSON $listLegalEntities403ApplicationJSONObject
-     */
-	
-    public ?ListLegalEntities403ApplicationJSON $listLegalEntities403ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->legalEntityCollection = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->listLegalEntities401ApplicationJSONObject = null;
-		$this->listLegalEntities403ApplicationJSONObject = null;
 	}
 }

@@ -42,27 +42,29 @@ class Users
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \Contractify\ContractifyAPI\Models\Operations\CurrentUserResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->currentUser200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\CurrentUser200ApplicationJSON', 'json');
+                $response->twoHundredApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\CurrentUserResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->currentUser401ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\CurrentUser401ApplicationJSON', 'json');
+                $response->fourHundredAndOneApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\CurrentUserUsersResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->currentUser403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\CurrentUser403ApplicationJSON', 'json');
+                $response->fourHundredAndThreeApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\CurrentUserUsersResponseResponseBody', 'json');
             }
         }
 
@@ -93,8 +95,10 @@ class Users
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \Contractify\ContractifyAPI\Models\Operations\ListUsersResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -107,13 +111,13 @@ class Users
         else if ($httpResponse->getStatusCode() === 401) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->listUsers401ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\ListUsers401ApplicationJSON', 'json');
+                $response->fourHundredAndOneApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\ListUsersResponseBody', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->listUsers403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\ListUsers403ApplicationJSON', 'json');
+                $response->fourHundredAndThreeApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'Contractify\ContractifyAPI\Models\Operations\ListUsersUsersResponseBody', 'json');
             }
         }
 

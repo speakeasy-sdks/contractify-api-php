@@ -1,5 +1,5 @@
 # Subfolders
-(*subfolders*)
+
 
 ### Available Operations
 
@@ -17,20 +17,20 @@ List all the subfolders within a company
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\ListSubfoldersRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListSubfoldersRequest();
+    $request = new Operations\ListSubfoldersRequest();
     $request->company = 749068;
 
     $response = $sdk->subfolders->listSubfolders($request);

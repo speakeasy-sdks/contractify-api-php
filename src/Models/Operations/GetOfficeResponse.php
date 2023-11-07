@@ -12,6 +12,38 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class GetOfficeResponse
 {
     /**
+     * OK
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetOfficeResponseBody $twoHundredApplicationJsonObject
+     */
+	
+    public ?GetOfficeResponseBody $twoHundredApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetOfficeOfficesResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?GetOfficeOfficesResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetOfficeOfficesResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?GetOfficeOfficesResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Not Found
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetOfficeOfficesResponse404ResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?GetOfficeOfficesResponse404ResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,46 +67,14 @@ class GetOfficeResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * OK
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetOffice200ApplicationJSON $getOffice200ApplicationJSONObject
-     */
-	
-    public ?GetOffice200ApplicationJSON $getOffice200ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetOffice401ApplicationJSON $getOffice401ApplicationJSONObject
-     */
-	
-    public ?GetOffice401ApplicationJSON $getOffice401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetOffice403ApplicationJSON $getOffice403ApplicationJSONObject
-     */
-	
-    public ?GetOffice403ApplicationJSON $getOffice403ApplicationJSONObject = null;
-    
-    /**
-     * Not Found
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetOffice404ApplicationJSON $getOffice404ApplicationJSONObject
-     */
-	
-    public ?GetOffice404ApplicationJSON $getOffice404ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->getOffice200ApplicationJSONObject = null;
-		$this->getOffice401ApplicationJSONObject = null;
-		$this->getOffice403ApplicationJSONObject = null;
-		$this->getOffice404ApplicationJSONObject = null;
 	}
 }

@@ -12,6 +12,30 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class CurrentUserResponse
 {
     /**
+     * OK
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CurrentUserResponseBody $twoHundredApplicationJsonObject
+     */
+	
+    public ?CurrentUserResponseBody $twoHundredApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CurrentUserUsersResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?CurrentUserUsersResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CurrentUserUsersResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?CurrentUserUsersResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,37 +59,13 @@ class CurrentUserResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * OK
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CurrentUser200ApplicationJSON $currentUser200ApplicationJSONObject
-     */
-	
-    public ?CurrentUser200ApplicationJSON $currentUser200ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CurrentUser401ApplicationJSON $currentUser401ApplicationJSONObject
-     */
-	
-    public ?CurrentUser401ApplicationJSON $currentUser401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CurrentUser403ApplicationJSON $currentUser403ApplicationJSONObject
-     */
-	
-    public ?CurrentUser403ApplicationJSON $currentUser403ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->currentUser200ApplicationJSONObject = null;
-		$this->currentUser401ApplicationJSONObject = null;
-		$this->currentUser403ApplicationJSONObject = null;
 	}
 }

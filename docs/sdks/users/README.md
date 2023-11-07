@@ -1,5 +1,5 @@
 # Users
-(*users*)
+
 
 ### Available Operations
 
@@ -18,21 +18,21 @@ Get the current user details
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
     $response = $sdk->users->currentUser();
 
-    if ($response->currentUser200ApplicationJSONObject !== null) {
+    if ($response->twoHundredApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -58,20 +58,20 @@ List all the users within a company
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\ListUsersRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListUsersRequest();
+    $request = new Operations\ListUsersRequest();
     $request->company = 606239;
     $request->page = 283983;
 

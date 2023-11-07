@@ -12,6 +12,22 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class ListSubfoldersResponse
 {
     /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListSubfoldersResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?ListSubfoldersResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListSubfoldersSubfoldersResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?ListSubfoldersSubfoldersResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -43,29 +59,13 @@ class ListSubfoldersResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListSubfolders401ApplicationJSON $listSubfolders401ApplicationJSONObject
-     */
-	
-    public ?ListSubfolders401ApplicationJSON $listSubfolders401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListSubfolders403ApplicationJSON $listSubfolders403ApplicationJSONObject
-     */
-	
-    public ?ListSubfolders403ApplicationJSON $listSubfolders403ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->dossierCollection = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->listSubfolders401ApplicationJSONObject = null;
-		$this->listSubfolders403ApplicationJSONObject = null;
 	}
 }

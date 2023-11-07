@@ -12,6 +12,38 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class GetRelationResponse
 {
     /**
+     * OK
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetRelationResponseBody $twoHundredApplicationJsonObject
+     */
+	
+    public ?GetRelationResponseBody $twoHundredApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetRelationRelationsResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?GetRelationRelationsResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetRelationRelationsResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?GetRelationRelationsResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Not Found
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetRelationRelationsResponse404ResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?GetRelationRelationsResponse404ResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,46 +67,14 @@ class GetRelationResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * OK
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetRelation200ApplicationJSON $getRelation200ApplicationJSONObject
-     */
-	
-    public ?GetRelation200ApplicationJSON $getRelation200ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetRelation401ApplicationJSON $getRelation401ApplicationJSONObject
-     */
-	
-    public ?GetRelation401ApplicationJSON $getRelation401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetRelation403ApplicationJSON $getRelation403ApplicationJSONObject
-     */
-	
-    public ?GetRelation403ApplicationJSON $getRelation403ApplicationJSONObject = null;
-    
-    /**
-     * Not Found
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\GetRelation404ApplicationJSON $getRelation404ApplicationJSONObject
-     */
-	
-    public ?GetRelation404ApplicationJSON $getRelation404ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->getRelation200ApplicationJSONObject = null;
-		$this->getRelation401ApplicationJSONObject = null;
-		$this->getRelation403ApplicationJSONObject = null;
-		$this->getRelation404ApplicationJSONObject = null;
 	}
 }

@@ -1,5 +1,5 @@
 # Offices
-(*offices*)
+
 
 ### Available Operations
 
@@ -21,22 +21,21 @@ Create an office
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\CreateOfficeRequest;
-use \Contractify\ContractifyAPI\Models\Shared\OfficeWrite;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateOfficeRequest();
-    $request->officeWrite = new OfficeWrite();
+    $request = new Operations\CreateOfficeRequest();
+    $request->officeWrite = new Shared\OfficeWrite();
     $request->officeWrite->bus = '1';
     $request->officeWrite->city = 'Sleidinge';
     $request->officeWrite->contactPerson = 'Ada Lovelace';
@@ -52,7 +51,7 @@ try {
 
     $response = $sdk->offices->createOffice($request);
 
-    if ($response->createOffice201ApplicationJSONObject !== null) {
+    if ($response->twoHundredAndOneApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -84,20 +83,20 @@ Delete an office
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\DeleteOfficeRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteOfficeRequest();
+    $request = new Operations\DeleteOfficeRequest();
     $request->company = 327183;
     $request->office = 668605;
 
@@ -135,26 +134,26 @@ Get information about an office
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\GetOfficeRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetOfficeRequest();
+    $request = new Operations\GetOfficeRequest();
     $request->company = 616050;
     $request->office = 134885;
 
     $response = $sdk->offices->getOffice($request);
 
-    if ($response->getOffice200ApplicationJSONObject !== null) {
+    if ($response->twoHundredApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -186,20 +185,20 @@ List all the offices within a company
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\ListOfficesRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListOfficesRequest();
+    $request = new Operations\ListOfficesRequest();
     $request->company = 303557;
 
     $response = $sdk->offices->listOffices($request);
@@ -236,22 +235,21 @@ Update an office
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\UpdateOfficeRequest;
-use \Contractify\ContractifyAPI\Models\Shared\OfficeWrite;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateOfficeRequest();
-    $request->officeWrite = new OfficeWrite();
+    $request = new Operations\UpdateOfficeRequest();
+    $request->officeWrite = new Shared\OfficeWrite();
     $request->officeWrite->bus = '1';
     $request->officeWrite->city = 'Sleidinge';
     $request->officeWrite->contactPerson = 'Ada Lovelace';
@@ -268,7 +266,7 @@ try {
 
     $response = $sdk->offices->updateOffice($request);
 
-    if ($response->updateOffice200ApplicationJSONObject !== null) {
+    if ($response->twoHundredApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {

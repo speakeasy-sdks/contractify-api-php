@@ -22,10 +22,10 @@ class ListDocumentsRequest
     /**
      * Return documents currently having this status in the eSigning process, can be comma separated
      * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListDocumentsEsigningStatus $esigningStatus
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\EsigningStatus $esigningStatus
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=esigning_status')]
-    public ?ListDocumentsEsigningStatus $esigningStatus = null;
+    public ?EsigningStatus $esigningStatus = null;
     
     /**
      * Return documents where e-signing was updated after the given date

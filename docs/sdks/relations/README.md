@@ -1,5 +1,5 @@
 # Relations
-(*relations*)
+
 
 ### Available Operations
 
@@ -21,24 +21,22 @@ Create a relation
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\CreateRelationRequest;
-use \Contractify\ContractifyAPI\Models\Shared\RelationWrite;
-use \Contractify\ContractifyAPI\Models\Shared\Address;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateRelationRequest();
-    $request->relationWrite = new RelationWrite();
-    $request->relationWrite->address = new Address();
+    $request = new Operations\CreateRelationRequest();
+    $request->relationWrite = new Shared\RelationWrite();
+    $request->relationWrite->address = new Shared\Address();
     $request->relationWrite->address->addressLine1 = '221B Baker Street';
     $request->relationWrite->address->addressLine2 = 'Marylebone';
     $request->relationWrite->address->city = 'London';
@@ -56,7 +54,7 @@ try {
 
     $response = $sdk->relations->createRelation($request);
 
-    if ($response->createRelation201ApplicationJSONObject !== null) {
+    if ($response->twoHundredAndOneApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -88,20 +86,20 @@ Delete a relation
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\DeleteRelationRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteRelationRequest();
+    $request = new Operations\DeleteRelationRequest();
     $request->company = 773418;
     $request->relation = 890630;
 
@@ -139,26 +137,26 @@ Get information about a relation
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\GetRelationRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetRelationRequest();
+    $request = new Operations\GetRelationRequest();
     $request->company = 734058;
     $request->relation = 979643;
 
     $response = $sdk->relations->getRelation($request);
 
-    if ($response->getRelation200ApplicationJSONObject !== null) {
+    if ($response->twoHundredApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -190,20 +188,20 @@ List all the relations within a company
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\ListRelationsRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListRelationsRequest();
+    $request = new Operations\ListRelationsRequest();
     $request->company = 454135;
     $request->page = 761434;
     $request->reference = 'string';
@@ -242,24 +240,22 @@ Update a relation
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\UpdateRelationRequest;
-use \Contractify\ContractifyAPI\Models\Shared\RelationWrite;
-use \Contractify\ContractifyAPI\Models\Shared\Address;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateRelationRequest();
-    $request->relationWrite = new RelationWrite();
-    $request->relationWrite->address = new Address();
+    $request = new Operations\UpdateRelationRequest();
+    $request->relationWrite = new Shared\RelationWrite();
+    $request->relationWrite->address = new Shared\Address();
     $request->relationWrite->address->addressLine1 = '221B Baker Street';
     $request->relationWrite->address->addressLine2 = 'Marylebone';
     $request->relationWrite->address->city = 'London';
@@ -278,7 +274,7 @@ try {
 
     $response = $sdk->relations->updateRelation($request);
 
-    if ($response->updateRelation200ApplicationJSONObject !== null) {
+    if ($response->twoHundredApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {

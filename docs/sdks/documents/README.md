@@ -1,5 +1,5 @@
 # Documents
-(*documents*)
+
 
 ### Available Operations
 
@@ -20,20 +20,20 @@ Delete a document
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\DeleteDocumentRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteDocumentRequest();
+    $request = new Operations\DeleteDocumentRequest();
     $request->company = 431806;
     $request->document = 379848;
 
@@ -71,26 +71,26 @@ Get information about a document
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\GetDocumentRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetDocumentRequest();
+    $request = new Operations\GetDocumentRequest();
     $request->company = 67810;
     $request->document = 267106;
 
     $response = $sdk->documents->getDocument($request);
 
-    if ($response->getDocument200ApplicationJSONObject !== null) {
+    if ($response->twoHundredApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -122,23 +122,22 @@ List all the documents within a company
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\ListDocumentsRequest;
-use \Contractify\ContractifyAPI\Models\Operations\ListDocumentsEsigningStatus;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListDocumentsRequest();
+    $request = new Operations\ListDocumentsRequest();
     $request->company = 581480;
-    $request->esigningStatus = ListDocumentsEsigningStatus::LegalDeclined;
+    $request->esigningStatus = Operations\EsigningStatus::LegalDeclined;
     $request->esigningUpdatedAfter = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-10T07:42:42.736Z');
     $request->page = 893340;
     $request->relationId = 873217;
@@ -178,28 +177,26 @@ Update a document
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\UpdateDocumentRequest;
-use \Contractify\ContractifyAPI\Models\Shared\DocumentWrite;
-use \Contractify\ContractifyAPI\Models\Shared\CustomFieldValueWrite;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateDocumentRequest();
-    $request->documentWrite = new DocumentWrite();
+    $request = new Operations\UpdateDocumentRequest();
+    $request->documentWrite = new Shared\DocumentWrite();
     $request->documentWrite->contracts = [
         1,
     ];
     $request->documentWrite->customFieldValues = [
-        new CustomFieldValueWrite(),
+        new Shared\CustomFieldValueWrite(),
     ];
     $request->documentWrite->description = 'Lorem ipsum dolor sit amet.';
     $request->documentWrite->dossiers = [
@@ -212,7 +209,7 @@ try {
 
     $response = $sdk->documents->updateDocument($request);
 
-    if ($response->updateDocument200ApplicationJSONObject !== null) {
+    if ($response->twoHundredApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {

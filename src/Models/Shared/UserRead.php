@@ -32,9 +32,9 @@ class UserRead
     public ?string $name = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('role')]
-    #[\JMS\Serializer\Annotation\Type('enum<Contractify\ContractifyAPI\Models\Shared\UserReadRole>')]
+    #[\JMS\Serializer\Annotation\Type('enum<Contractify\ContractifyAPI\Models\Shared\Role>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?UserReadRole $role = null;
+    public ?Role $role = null;
     
 	public function __construct()
 	{

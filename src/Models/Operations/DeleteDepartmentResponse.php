@@ -12,6 +12,38 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class DeleteDepartmentResponse
 {
     /**
+     * Precondition failed
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentResponseBody $fourHundredApplicationJsonObject
+     */
+	
+    public ?DeleteDepartmentResponseBody $fourHundredApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentDepartmentsResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?DeleteDepartmentDepartmentsResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentDepartmentsResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?DeleteDepartmentDepartmentsResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Not Found
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentDepartmentsResponse404ResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?DeleteDepartmentDepartmentsResponse404ResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,46 +67,14 @@ class DeleteDepartmentResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * Precondition failed
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDepartment400ApplicationJSON $deleteDepartment400ApplicationJSONObject
-     */
-	
-    public ?DeleteDepartment400ApplicationJSON $deleteDepartment400ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDepartment401ApplicationJSON $deleteDepartment401ApplicationJSONObject
-     */
-	
-    public ?DeleteDepartment401ApplicationJSON $deleteDepartment401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDepartment403ApplicationJSON $deleteDepartment403ApplicationJSONObject
-     */
-	
-    public ?DeleteDepartment403ApplicationJSON $deleteDepartment403ApplicationJSONObject = null;
-    
-    /**
-     * Not Found
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteDepartment404ApplicationJSON $deleteDepartment404ApplicationJSONObject
-     */
-	
-    public ?DeleteDepartment404ApplicationJSON $deleteDepartment404ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->deleteDepartment400ApplicationJSONObject = null;
-		$this->deleteDepartment401ApplicationJSONObject = null;
-		$this->deleteDepartment403ApplicationJSONObject = null;
-		$this->deleteDepartment404ApplicationJSONObject = null;
 	}
 }

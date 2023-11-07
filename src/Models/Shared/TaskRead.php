@@ -27,9 +27,9 @@ class TaskRead
     public ?\DateTime $dueDate = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('due_date_depends_on')]
-    #[\JMS\Serializer\Annotation\Type('enum<Contractify\ContractifyAPI\Models\Shared\TaskReadDueDateDependsOn>')]
+    #[\JMS\Serializer\Annotation\Type('enum<Contractify\ContractifyAPI\Models\Shared\DueDateDependsOn>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?TaskReadDueDateDependsOn $dueDateDependsOn = null;
+    public ?DueDateDependsOn $dueDateDependsOn = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('due_date_interval')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -72,9 +72,9 @@ class TaskRead
     public ?string $repetitionInterval = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<Contractify\ContractifyAPI\Models\Shared\TaskReadStatus>')]
+    #[\JMS\Serializer\Annotation\Type('enum<Contractify\ContractifyAPI\Models\Shared\Status>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?TaskReadStatus $status = null;
+    public ?Status $status = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('title')]
     #[\JMS\Serializer\Annotation\Type('string')]

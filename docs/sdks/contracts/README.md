@@ -1,5 +1,5 @@
 # Contracts
-(*contracts*)
+
 
 ### Available Operations
 
@@ -21,32 +21,26 @@ Create a contract
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\CreateContractRequest;
-use \Contractify\ContractifyAPI\Models\Shared\ContractWrite;
-use \Contractify\ContractifyAPI\Models\Shared\CustomFieldValueWrite;
-use \Contractify\ContractifyAPI\Models\Shared\ContractPhase;
-use \Contractify\ContractifyAPI\Models\Shared\ContractRenewal;
-use \Contractify\ContractifyAPI\Models\Shared\ContractAutomaticRenewal;
-use \Contractify\ContractifyAPI\Models\Shared\ContractTermination;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateContractRequest();
-    $request->contractWrite = new ContractWrite();
+    $request = new Operations\CreateContractRequest();
+    $request->contractWrite = new Shared\ContractWrite();
     $request->contractWrite->contractTypes = [
         940947,
     ];
     $request->contractWrite->customFieldValues = [
-        new CustomFieldValueWrite(),
+        new Shared\CustomFieldValueWrite(),
     ];
     $request->contractWrite->departments = [
         426077,
@@ -66,17 +60,17 @@ try {
         559447,
     ];
     $request->contractWrite->ownerId = 1;
-    $request->contractWrite->phase = ContractPhase::Ongoing;
+    $request->contractWrite->phase = Shared\ContractPhase::Ongoing;
     $request->contractWrite->relations = [
         657681,
     ];
-    $request->contractWrite->renewal = new ContractRenewal();
-    $request->contractWrite->renewal->automaticRenewal = new ContractAutomaticRenewal();
+    $request->contractWrite->renewal = new Shared\ContractRenewal();
+    $request->contractWrite->renewal->automaticRenewal = new Shared\ContractAutomaticRenewal();
     $request->contractWrite->renewal->automaticRenewal->numberOfRenewals = 1;
     $request->contractWrite->renewal->automaticRenewal->renewalPeriod = 'P3Y';
     $request->contractWrite->renewal->isAutomaticallyRenewed = false;
     $request->contractWrite->startDate = DateTime::createFromFormat('Y-m-d', '2021-01-01');
-    $request->contractWrite->termination = new ContractTermination();
+    $request->contractWrite->termination = new Shared\ContractTermination();
     $request->contractWrite->termination->isTerminableAtAnyTime = false;
     $request->contractWrite->termination->terminationDate = DateTime::createFromFormat('Y-m-d', '2021-11-30');
     $request->contractWrite->termination->terminationDuration = 'P1M';
@@ -84,7 +78,7 @@ try {
 
     $response = $sdk->contracts->createContract($request);
 
-    if ($response->createContract201ApplicationJSONObject !== null) {
+    if ($response->twoHundredAndOneApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -116,20 +110,20 @@ Delete a contract
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\DeleteContractRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteContractRequest();
+    $request = new Operations\DeleteContractRequest();
     $request->company = 791005;
     $request->contract = 200974;
 
@@ -167,26 +161,26 @@ Get information about a contract
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\GetContractRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetContractRequest();
+    $request = new Operations\GetContractRequest();
     $request->company = 362495;
     $request->contract = 163842;
 
     $response = $sdk->contracts->getContract($request);
 
-    if ($response->getContract200ApplicationJSONObject !== null) {
+    if ($response->twoHundredApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -218,20 +212,20 @@ List all the contracts within a company
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\ListContractsRequest;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListContractsRequest();
+    $request = new Operations\ListContractsRequest();
     $request->company = 567515;
     $request->page = 62076;
 
@@ -269,32 +263,26 @@ Update a contract
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \Contractify\ContractifyAPI\ContractifyProduction;
-use \Contractify\ContractifyAPI\Models\Shared\Security;
-use \Contractify\ContractifyAPI\Models\Operations\UpdateContractRequest;
-use \Contractify\ContractifyAPI\Models\Shared\ContractWrite;
-use \Contractify\ContractifyAPI\Models\Shared\CustomFieldValueWrite;
-use \Contractify\ContractifyAPI\Models\Shared\ContractPhase;
-use \Contractify\ContractifyAPI\Models\Shared\ContractRenewal;
-use \Contractify\ContractifyAPI\Models\Shared\ContractAutomaticRenewal;
-use \Contractify\ContractifyAPI\Models\Shared\ContractTermination;
+use \Contractify\ContractifyAPI;
+use \Contractify\ContractifyAPI\Models\Shared;
+use \Contractify\ContractifyAPI\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->oAuth2 = '';
 $security->personalAccessToken = '';
 
-$sdk = ContractifyProduction::builder()
+$sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateContractRequest();
-    $request->contractWrite = new ContractWrite();
+    $request = new Operations\UpdateContractRequest();
+    $request->contractWrite = new Shared\ContractWrite();
     $request->contractWrite->contractTypes = [
         60280,
     ];
     $request->contractWrite->customFieldValues = [
-        new CustomFieldValueWrite(),
+        new Shared\CustomFieldValueWrite(),
     ];
     $request->contractWrite->departments = [
         331790,
@@ -314,17 +302,17 @@ try {
         178046,
     ];
     $request->contractWrite->ownerId = 1;
-    $request->contractWrite->phase = ContractPhase::Ongoing;
+    $request->contractWrite->phase = Shared\ContractPhase::Ongoing;
     $request->contractWrite->relations = [
         331597,
     ];
-    $request->contractWrite->renewal = new ContractRenewal();
-    $request->contractWrite->renewal->automaticRenewal = new ContractAutomaticRenewal();
+    $request->contractWrite->renewal = new Shared\ContractRenewal();
+    $request->contractWrite->renewal->automaticRenewal = new Shared\ContractAutomaticRenewal();
     $request->contractWrite->renewal->automaticRenewal->numberOfRenewals = 1;
     $request->contractWrite->renewal->automaticRenewal->renewalPeriod = 'P3Y';
     $request->contractWrite->renewal->isAutomaticallyRenewed = false;
     $request->contractWrite->startDate = DateTime::createFromFormat('Y-m-d', '2021-01-01');
-    $request->contractWrite->termination = new ContractTermination();
+    $request->contractWrite->termination = new Shared\ContractTermination();
     $request->contractWrite->termination->isTerminableAtAnyTime = false;
     $request->contractWrite->termination->terminationDate = DateTime::createFromFormat('Y-m-d', '2021-11-30');
     $request->contractWrite->termination->terminationDuration = 'P1M';
@@ -333,7 +321,7 @@ try {
 
     $response = $sdk->contracts->updateContract($request);
 
-    if ($response->updateContract200ApplicationJSONObject !== null) {
+    if ($response->twoHundredApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {

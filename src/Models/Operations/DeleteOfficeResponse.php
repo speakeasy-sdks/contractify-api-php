@@ -12,6 +12,38 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class DeleteOfficeResponse
 {
     /**
+     * Precondition failed
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteOfficeResponseBody $fourHundredApplicationJsonObject
+     */
+	
+    public ?DeleteOfficeResponseBody $fourHundredApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteOfficeOfficesResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?DeleteOfficeOfficesResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteOfficeOfficesResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?DeleteOfficeOfficesResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Not Found
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteOfficeOfficesResponse404ResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?DeleteOfficeOfficesResponse404ResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,46 +67,14 @@ class DeleteOfficeResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * Precondition failed
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteOffice400ApplicationJSON $deleteOffice400ApplicationJSONObject
-     */
-	
-    public ?DeleteOffice400ApplicationJSON $deleteOffice400ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteOffice401ApplicationJSON $deleteOffice401ApplicationJSONObject
-     */
-	
-    public ?DeleteOffice401ApplicationJSON $deleteOffice401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteOffice403ApplicationJSON $deleteOffice403ApplicationJSONObject
-     */
-	
-    public ?DeleteOffice403ApplicationJSON $deleteOffice403ApplicationJSONObject = null;
-    
-    /**
-     * Not Found
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteOffice404ApplicationJSON $deleteOffice404ApplicationJSONObject
-     */
-	
-    public ?DeleteOffice404ApplicationJSON $deleteOffice404ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->deleteOffice400ApplicationJSONObject = null;
-		$this->deleteOffice401ApplicationJSONObject = null;
-		$this->deleteOffice403ApplicationJSONObject = null;
-		$this->deleteOffice404ApplicationJSONObject = null;
 	}
 }

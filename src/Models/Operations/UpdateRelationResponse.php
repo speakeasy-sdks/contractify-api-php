@@ -12,6 +12,46 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class UpdateRelationResponse
 {
     /**
+     * OK
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateRelationResponseBody $twoHundredApplicationJsonObject
+     */
+	
+    public ?UpdateRelationResponseBody $twoHundredApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateRelationRelationsResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?UpdateRelationRelationsResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateRelationRelationsResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?UpdateRelationRelationsResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Not Found
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateRelationRelationsResponse404ResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?UpdateRelationRelationsResponse404ResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
+     * Invalid data posted
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateRelationRelationsResponse422ResponseBody $fourHundredAndTwentyTwoApplicationJsonObject
+     */
+	
+    public ?UpdateRelationRelationsResponse422ResponseBody $fourHundredAndTwentyTwoApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,55 +75,15 @@ class UpdateRelationResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * OK
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateRelation200ApplicationJSON $updateRelation200ApplicationJSONObject
-     */
-	
-    public ?UpdateRelation200ApplicationJSON $updateRelation200ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateRelation401ApplicationJSON $updateRelation401ApplicationJSONObject
-     */
-	
-    public ?UpdateRelation401ApplicationJSON $updateRelation401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateRelation403ApplicationJSON $updateRelation403ApplicationJSONObject
-     */
-	
-    public ?UpdateRelation403ApplicationJSON $updateRelation403ApplicationJSONObject = null;
-    
-    /**
-     * Not Found
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateRelation404ApplicationJSON $updateRelation404ApplicationJSONObject
-     */
-	
-    public ?UpdateRelation404ApplicationJSON $updateRelation404ApplicationJSONObject = null;
-    
-    /**
-     * Invalid data posted
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateRelation422ApplicationJSON $updateRelation422ApplicationJSONObject
-     */
-	
-    public ?UpdateRelation422ApplicationJSON $updateRelation422ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
+		$this->fourHundredAndTwentyTwoApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->updateRelation200ApplicationJSONObject = null;
-		$this->updateRelation401ApplicationJSONObject = null;
-		$this->updateRelation403ApplicationJSONObject = null;
-		$this->updateRelation404ApplicationJSONObject = null;
-		$this->updateRelation422ApplicationJSONObject = null;
 	}
 }

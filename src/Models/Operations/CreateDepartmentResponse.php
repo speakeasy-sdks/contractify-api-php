@@ -12,6 +12,38 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class CreateDepartmentResponse
 {
     /**
+     * Created
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateDepartmentResponseBody $twoHundredAndOneApplicationJsonObject
+     */
+	
+    public ?CreateDepartmentResponseBody $twoHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateDepartmentDepartmentsResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?CreateDepartmentDepartmentsResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateDepartmentDepartmentsResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?CreateDepartmentDepartmentsResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Invalid data posted
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateDepartmentDepartmentsResponse422ResponseBody $fourHundredAndTwentyTwoApplicationJsonObject
+     */
+	
+    public ?CreateDepartmentDepartmentsResponse422ResponseBody $fourHundredAndTwentyTwoApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,46 +67,14 @@ class CreateDepartmentResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * Created
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateDepartment201ApplicationJSON $createDepartment201ApplicationJSONObject
-     */
-	
-    public ?CreateDepartment201ApplicationJSON $createDepartment201ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateDepartment401ApplicationJSON $createDepartment401ApplicationJSONObject
-     */
-	
-    public ?CreateDepartment401ApplicationJSON $createDepartment401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateDepartment403ApplicationJSON $createDepartment403ApplicationJSONObject
-     */
-	
-    public ?CreateDepartment403ApplicationJSON $createDepartment403ApplicationJSONObject = null;
-    
-    /**
-     * Invalid data posted
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateDepartment422ApplicationJSON $createDepartment422ApplicationJSONObject
-     */
-	
-    public ?CreateDepartment422ApplicationJSON $createDepartment422ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndTwentyTwoApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->createDepartment201ApplicationJSONObject = null;
-		$this->createDepartment401ApplicationJSONObject = null;
-		$this->createDepartment403ApplicationJSONObject = null;
-		$this->createDepartment422ApplicationJSONObject = null;
 	}
 }

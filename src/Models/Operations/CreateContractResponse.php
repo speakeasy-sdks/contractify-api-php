@@ -12,6 +12,38 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class CreateContractResponse
 {
     /**
+     * Created
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateContractResponseBody $twoHundredAndOneApplicationJsonObject
+     */
+	
+    public ?CreateContractResponseBody $twoHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateContractContractsResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?CreateContractContractsResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateContractContractsResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?CreateContractContractsResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Invalid data posted
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateContractContractsResponse422ResponseBody $fourHundredAndTwentyTwoApplicationJsonObject
+     */
+	
+    public ?CreateContractContractsResponse422ResponseBody $fourHundredAndTwentyTwoApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,46 +67,14 @@ class CreateContractResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * Created
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateContract201ApplicationJSON $createContract201ApplicationJSONObject
-     */
-	
-    public ?CreateContract201ApplicationJSON $createContract201ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateContract401ApplicationJSON $createContract401ApplicationJSONObject
-     */
-	
-    public ?CreateContract401ApplicationJSON $createContract401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateContract403ApplicationJSON $createContract403ApplicationJSONObject
-     */
-	
-    public ?CreateContract403ApplicationJSON $createContract403ApplicationJSONObject = null;
-    
-    /**
-     * Invalid data posted
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateContract422ApplicationJSON $createContract422ApplicationJSONObject
-     */
-	
-    public ?CreateContract422ApplicationJSON $createContract422ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndTwentyTwoApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->createContract201ApplicationJSONObject = null;
-		$this->createContract401ApplicationJSONObject = null;
-		$this->createContract403ApplicationJSONObject = null;
-		$this->createContract422ApplicationJSONObject = null;
 	}
 }

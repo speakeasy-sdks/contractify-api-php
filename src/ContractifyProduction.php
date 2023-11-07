@@ -78,13 +78,13 @@ class ContractifyProduction
 	
 	public Documents $documents;
 	
+	public Subfolders $subfolders;
+	
 	public LegalEntities $legalEntities;
 	
 	public Offices $offices;
 	
 	public Relations $relations;
-	
-	public Subfolders $subfolders;
 	
 	public Tasks $tasks;
 	
@@ -119,13 +119,13 @@ class ContractifyProduction
 		
 		$this->documents = new Documents($this->sdkConfiguration);
 		
+		$this->subfolders = new Subfolders($this->sdkConfiguration);
+		
 		$this->legalEntities = new LegalEntities($this->sdkConfiguration);
 		
 		$this->offices = new Offices($this->sdkConfiguration);
 		
 		$this->relations = new Relations($this->sdkConfiguration);
-		
-		$this->subfolders = new Subfolders($this->sdkConfiguration);
 		
 		$this->tasks = new Tasks($this->sdkConfiguration);
 		

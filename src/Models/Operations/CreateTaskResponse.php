@@ -12,6 +12,38 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class CreateTaskResponse
 {
     /**
+     * OK
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateTaskResponseBody $twoHundredApplicationJsonObject
+     */
+	
+    public ?CreateTaskResponseBody $twoHundredApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateTaskTasksResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?CreateTaskTasksResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateTaskTasksResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?CreateTaskTasksResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Invalid data posted
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateTaskTasksResponse422ResponseBody $fourHundredAndTwentyTwoApplicationJsonObject
+     */
+	
+    public ?CreateTaskTasksResponse422ResponseBody $fourHundredAndTwentyTwoApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,46 +67,14 @@ class CreateTaskResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * OK
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateTask200ApplicationJSON $createTask200ApplicationJSONObject
-     */
-	
-    public ?CreateTask200ApplicationJSON $createTask200ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateTask401ApplicationJSON $createTask401ApplicationJSONObject
-     */
-	
-    public ?CreateTask401ApplicationJSON $createTask401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateTask403ApplicationJSON $createTask403ApplicationJSONObject
-     */
-	
-    public ?CreateTask403ApplicationJSON $createTask403ApplicationJSONObject = null;
-    
-    /**
-     * Invalid data posted
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\CreateTask422ApplicationJSON $createTask422ApplicationJSONObject
-     */
-	
-    public ?CreateTask422ApplicationJSON $createTask422ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndTwentyTwoApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->createTask200ApplicationJSONObject = null;
-		$this->createTask401ApplicationJSONObject = null;
-		$this->createTask403ApplicationJSONObject = null;
-		$this->createTask422ApplicationJSONObject = null;
 	}
 }

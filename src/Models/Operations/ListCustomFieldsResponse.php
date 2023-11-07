@@ -12,6 +12,22 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class ListCustomFieldsResponse
 {
     /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?ListCustomFieldsResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsCustomFieldsResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?ListCustomFieldsCustomFieldsResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -43,29 +59,13 @@ class ListCustomFieldsResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListCustomFields401ApplicationJSON $listCustomFields401ApplicationJSONObject
-     */
-	
-    public ?ListCustomFields401ApplicationJSON $listCustomFields401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\ListCustomFields403ApplicationJSON $listCustomFields403ApplicationJSONObject
-     */
-	
-    public ?ListCustomFields403ApplicationJSON $listCustomFields403ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->customFieldCollection = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->listCustomFields401ApplicationJSONObject = null;
-		$this->listCustomFields403ApplicationJSONObject = null;
 	}
 }

@@ -12,6 +12,38 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class UpdateDocumentResponse
 {
     /**
+     * OK
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDocumentResponseBody $twoHundredApplicationJsonObject
+     */
+	
+    public ?UpdateDocumentResponseBody $twoHundredApplicationJsonObject = null;
+    
+    /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDocumentDocumentsResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?UpdateDocumentDocumentsResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDocumentDocumentsResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?UpdateDocumentDocumentsResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Not Found
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDocumentDocumentsResponse404ResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?UpdateDocumentDocumentsResponse404ResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,46 +67,14 @@ class UpdateDocumentResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * OK
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDocument200ApplicationJSON $updateDocument200ApplicationJSONObject
-     */
-	
-    public ?UpdateDocument200ApplicationJSON $updateDocument200ApplicationJSONObject = null;
-    
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDocument401ApplicationJSON $updateDocument401ApplicationJSONObject
-     */
-	
-    public ?UpdateDocument401ApplicationJSON $updateDocument401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDocument403ApplicationJSON $updateDocument403ApplicationJSONObject
-     */
-	
-    public ?UpdateDocument403ApplicationJSON $updateDocument403ApplicationJSONObject = null;
-    
-    /**
-     * Not Found
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\UpdateDocument404ApplicationJSON $updateDocument404ApplicationJSONObject
-     */
-	
-    public ?UpdateDocument404ApplicationJSON $updateDocument404ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredApplicationJsonObject = null;
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->updateDocument200ApplicationJSONObject = null;
-		$this->updateDocument401ApplicationJSONObject = null;
-		$this->updateDocument403ApplicationJSONObject = null;
-		$this->updateDocument404ApplicationJSONObject = null;
 	}
 }

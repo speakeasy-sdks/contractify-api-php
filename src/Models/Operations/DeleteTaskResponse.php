@@ -12,6 +12,30 @@ namespace Contractify\ContractifyAPI\Models\Operations;
 class DeleteTaskResponse
 {
     /**
+     * Unauthenticated
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteTaskResponseBody $fourHundredAndOneApplicationJsonObject
+     */
+	
+    public ?DeleteTaskResponseBody $fourHundredAndOneApplicationJsonObject = null;
+    
+    /**
+     * Forbidden
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteTaskTasksResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?DeleteTaskTasksResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * Not Found
+     * 
+     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteTaskTasksResponseResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?DeleteTaskTasksResponseResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,37 +59,13 @@ class DeleteTaskResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * Unauthenticated
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteTask401ApplicationJSON $deleteTask401ApplicationJSONObject
-     */
-	
-    public ?DeleteTask401ApplicationJSON $deleteTask401ApplicationJSONObject = null;
-    
-    /**
-     * Forbidden
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteTask403ApplicationJSON $deleteTask403ApplicationJSONObject
-     */
-	
-    public ?DeleteTask403ApplicationJSON $deleteTask403ApplicationJSONObject = null;
-    
-    /**
-     * Not Found
-     * 
-     * @var ?\Contractify\ContractifyAPI\Models\Operations\DeleteTask404ApplicationJSON $deleteTask404ApplicationJSONObject
-     */
-	
-    public ?DeleteTask404ApplicationJSON $deleteTask404ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredAndOneApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->deleteTask401ApplicationJSONObject = null;
-		$this->deleteTask403ApplicationJSONObject = null;
-		$this->deleteTask404ApplicationJSONObject = null;
 	}
 }
