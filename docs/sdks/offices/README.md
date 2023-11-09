@@ -63,12 +63,12 @@ try {
 
 | Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\CreateOfficeRequest](../../models/operations/CreateOfficeRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `$request`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\CreateOfficeRequest](../../Models/Operations/CreateOfficeRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\CreateOfficeResponse](../../models/operations/CreateOfficeResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\CreateOfficeResponse](../../Models/Operations/CreateOfficeResponse.md)**
 
 
 ## deleteOffice
@@ -114,12 +114,12 @@ try {
 
 | Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\DeleteOfficeRequest](../../models/operations/DeleteOfficeRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `$request`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\DeleteOfficeRequest](../../Models/Operations/DeleteOfficeRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\DeleteOfficeResponse](../../models/operations/DeleteOfficeResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\DeleteOfficeResponse](../../Models/Operations/DeleteOfficeResponse.md)**
 
 
 ## getOffice
@@ -165,12 +165,12 @@ try {
 
 | Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\GetOfficeRequest](../../models/operations/GetOfficeRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| `$request`                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\GetOfficeRequest](../../Models/Operations/GetOfficeRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\GetOfficeResponse](../../models/operations/GetOfficeResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\GetOfficeResponse](../../Models/Operations/GetOfficeResponse.md)**
 
 
 ## listOffices
@@ -215,12 +215,12 @@ try {
 
 | Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\ListOfficesRequest](../../models/operations/ListOfficesRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `$request`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\ListOfficesRequest](../../Models/Operations/ListOfficesRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\ListOfficesResponse](../../models/operations/ListOfficesResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\ListOfficesResponse](../../Models/Operations/ListOfficesResponse.md)**
 
 
 ## updateOffice
@@ -278,10 +278,10 @@ try {
 
 | Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\UpdateOfficeRequest](../../models/operations/UpdateOfficeRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `$request`                                                                                                          | [\Contractify\ContractifyAPI\Models\Operations\UpdateOfficeRequest](../../Models/Operations/UpdateOfficeRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\UpdateOfficeResponse](../../models/operations/UpdateOfficeResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\UpdateOfficeResponse](../../Models/Operations/UpdateOfficeResponse.md)**
 

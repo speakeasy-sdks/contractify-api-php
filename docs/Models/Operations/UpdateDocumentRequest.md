@@ -1,0 +1,10 @@
+# UpdateDocumentRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `documentWrite`                                                                                  | [?\Contractify\ContractifyAPI\Models\Shared\DocumentWrite](../../Models/Shared/DocumentWrite.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
+| `company`                                                                                        | *int*                                                                                            | :heavy_check_mark:                                                                               | Id of the company                                                                                |
+| `document`                                                                                       | *int*                                                                                            | :heavy_check_mark:                                                                               | Id of the document                                                                               |

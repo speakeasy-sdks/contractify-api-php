@@ -47,10 +47,10 @@ try {
 
 | Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsRequest](../../models/operations/ListCustomFieldsRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| `$request`                                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsRequest](../../Models/Operations/ListCustomFieldsRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsResponse](../../models/operations/ListCustomFieldsResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\ListCustomFieldsResponse](../../Models/Operations/ListCustomFieldsResponse.md)**
 

@@ -47,10 +47,10 @@ try {
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\ListSubfoldersRequest](../../models/operations/ListSubfoldersRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\ListSubfoldersRequest](../../Models/Operations/ListSubfoldersRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\ListSubfoldersResponse](../../models/operations/ListSubfoldersResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\ListSubfoldersResponse](../../Models/Operations/ListSubfoldersResponse.md)**
 

@@ -47,10 +47,10 @@ try {
 
 | Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesRequest](../../models/operations/ListLegalEntitiesRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| `$request`                                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesRequest](../../Models/Operations/ListLegalEntitiesRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesResponse](../../models/operations/ListLegalEntitiesResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\ListLegalEntitiesResponse](../../Models/Operations/ListLegalEntitiesResponse.md)**
 

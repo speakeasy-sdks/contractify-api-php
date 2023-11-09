@@ -53,12 +53,12 @@ try {
 
 | Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\CreateDepartmentRequest](../../models/operations/CreateDepartmentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| `$request`                                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\CreateDepartmentRequest](../../Models/Operations/CreateDepartmentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\CreateDepartmentResponse](../../models/operations/CreateDepartmentResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\CreateDepartmentResponse](../../Models/Operations/CreateDepartmentResponse.md)**
 
 
 ## deleteDepartment
@@ -104,12 +104,12 @@ try {
 
 | Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentRequest](../../models/operations/DeleteDepartmentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| `$request`                                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentRequest](../../Models/Operations/DeleteDepartmentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentResponse](../../models/operations/DeleteDepartmentResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\DeleteDepartmentResponse](../../Models/Operations/DeleteDepartmentResponse.md)**
 
 
 ## getDepartment
@@ -155,12 +155,12 @@ try {
 
 | Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\GetDepartmentRequest](../../models/operations/GetDepartmentRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| `$request`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\GetDepartmentRequest](../../Models/Operations/GetDepartmentRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\GetDepartmentResponse](../../models/operations/GetDepartmentResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\GetDepartmentResponse](../../Models/Operations/GetDepartmentResponse.md)**
 
 
 ## listDepartments
@@ -205,12 +205,12 @@ try {
 
 | Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\ListDepartmentsRequest](../../models/operations/ListDepartmentsRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| `$request`                                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\ListDepartmentsRequest](../../Models/Operations/ListDepartmentsRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\ListDepartmentsResponse](../../models/operations/ListDepartmentsResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\ListDepartmentsResponse](../../Models/Operations/ListDepartmentsResponse.md)**
 
 
 ## updateDepartment
@@ -258,10 +258,10 @@ try {
 
 | Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentRequest](../../models/operations/UpdateDepartmentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| `$request`                                                                                                                  | [\Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentRequest](../../Models/Operations/UpdateDepartmentRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentResponse](../../models/operations/UpdateDepartmentResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\UpdateDepartmentResponse](../../Models/Operations/UpdateDepartmentResponse.md)**
 

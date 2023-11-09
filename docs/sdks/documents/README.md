@@ -51,12 +51,12 @@ try {
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\DeleteDocumentRequest](../../models/operations/DeleteDocumentRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\DeleteDocumentRequest](../../Models/Operations/DeleteDocumentRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\DeleteDocumentResponse](../../models/operations/DeleteDocumentResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\DeleteDocumentResponse](../../Models/Operations/DeleteDocumentResponse.md)**
 
 
 ## getDocument
@@ -102,12 +102,12 @@ try {
 
 | Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\GetDocumentRequest](../../models/operations/GetDocumentRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `$request`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\GetDocumentRequest](../../Models/Operations/GetDocumentRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\GetDocumentResponse](../../models/operations/GetDocumentResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\GetDocumentResponse](../../Models/Operations/GetDocumentResponse.md)**
 
 
 ## listDocuments
@@ -157,12 +157,12 @@ try {
 
 | Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\ListDocumentsRequest](../../models/operations/ListDocumentsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| `$request`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\ListDocumentsRequest](../../Models/Operations/ListDocumentsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\ListDocumentsResponse](../../models/operations/ListDocumentsResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\ListDocumentsResponse](../../Models/Operations/ListDocumentsResponse.md)**
 
 
 ## updateDocument
@@ -221,10 +221,10 @@ try {
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\UpdateDocumentRequest](../../models/operations/UpdateDocumentRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\UpdateDocumentRequest](../../Models/Operations/UpdateDocumentRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\UpdateDocumentResponse](../../models/operations/UpdateDocumentResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\UpdateDocumentResponse](../../Models/Operations/UpdateDocumentResponse.md)**
 

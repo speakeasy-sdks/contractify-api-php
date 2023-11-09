@@ -1,9 +1,0 @@
-# DocumentCollection
-
-
-## Fields
-
-| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `data`                                                                                               | array<[\Contractify\ContractifyAPI\Models\Shared\DocumentRead](../../models/shared/DocumentRead.md)> | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |
-| `meta`                                                                                               | [?\Contractify\ContractifyAPI\Models\Shared\Pagination](../../models/shared/Pagination.md)           | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |

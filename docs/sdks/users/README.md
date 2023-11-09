@@ -43,7 +43,7 @@ try {
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\CurrentUserResponse](../../models/operations/CurrentUserResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\CurrentUserResponse](../../Models/Operations/CurrentUserResponse.md)**
 
 
 ## listUsers
@@ -89,10 +89,10 @@ try {
 
 | Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\ListUsersRequest](../../models/operations/ListUsersRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| `$request`                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\ListUsersRequest](../../Models/Operations/ListUsersRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\ListUsersResponse](../../models/operations/ListUsersResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\ListUsersResponse](../../Models/Operations/ListUsersResponse.md)**
 

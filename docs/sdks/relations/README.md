@@ -66,12 +66,12 @@ try {
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\CreateRelationRequest](../../models/operations/CreateRelationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\CreateRelationRequest](../../Models/Operations/CreateRelationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\CreateRelationResponse](../../models/operations/CreateRelationResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\CreateRelationResponse](../../Models/Operations/CreateRelationResponse.md)**
 
 
 ## deleteRelation
@@ -117,12 +117,12 @@ try {
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\DeleteRelationRequest](../../models/operations/DeleteRelationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\DeleteRelationRequest](../../Models/Operations/DeleteRelationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\DeleteRelationResponse](../../models/operations/DeleteRelationResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\DeleteRelationResponse](../../Models/Operations/DeleteRelationResponse.md)**
 
 
 ## getRelation
@@ -168,12 +168,12 @@ try {
 
 | Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\GetRelationRequest](../../models/operations/GetRelationRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `$request`                                                                                                        | [\Contractify\ContractifyAPI\Models\Operations\GetRelationRequest](../../Models/Operations/GetRelationRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\GetRelationResponse](../../models/operations/GetRelationResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\GetRelationResponse](../../Models/Operations/GetRelationResponse.md)**
 
 
 ## listRelations
@@ -220,12 +220,12 @@ try {
 
 | Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\ListRelationsRequest](../../models/operations/ListRelationsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| `$request`                                                                                                            | [\Contractify\ContractifyAPI\Models\Operations\ListRelationsRequest](../../Models/Operations/ListRelationsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\ListRelationsResponse](../../models/operations/ListRelationsResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\ListRelationsResponse](../../Models/Operations/ListRelationsResponse.md)**
 
 
 ## updateRelation
@@ -286,10 +286,10 @@ try {
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\UpdateRelationRequest](../../models/operations/UpdateRelationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `$request`                                                                                                              | [\Contractify\ContractifyAPI\Models\Operations\UpdateRelationRequest](../../Models/Operations/UpdateRelationRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\UpdateRelationResponse](../../models/operations/UpdateRelationResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\UpdateRelationResponse](../../Models/Operations/UpdateRelationResponse.md)**
 

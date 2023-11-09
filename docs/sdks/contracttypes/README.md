@@ -47,10 +47,10 @@ try {
 
 | Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\ListContractTypesRequest](../../models/operations/ListContractTypesRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| `$request`                                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\ListContractTypesRequest](../../Models/Operations/ListContractTypesRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\ListContractTypesResponse](../../models/operations/ListContractTypesResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\ListContractTypesResponse](../../Models/Operations/ListContractTypesResponse.md)**
 

@@ -62,12 +62,12 @@ try {
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\CreateTaskRequest](../../models/operations/CreateTaskRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `$request`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\CreateTaskRequest](../../Models/Operations/CreateTaskRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\CreateTaskResponse](../../models/operations/CreateTaskResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\CreateTaskResponse](../../Models/Operations/CreateTaskResponse.md)**
 
 
 ## deleteTask
@@ -113,12 +113,12 @@ try {
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\DeleteTaskRequest](../../models/operations/DeleteTaskRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `$request`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\DeleteTaskRequest](../../Models/Operations/DeleteTaskRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\DeleteTaskResponse](../../models/operations/DeleteTaskResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\DeleteTaskResponse](../../Models/Operations/DeleteTaskResponse.md)**
 
 
 ## getTask
@@ -164,12 +164,12 @@ try {
 
 | Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\GetTaskRequest](../../models/operations/GetTaskRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| `$request`                                                                                                | [\Contractify\ContractifyAPI\Models\Operations\GetTaskRequest](../../Models/Operations/GetTaskRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\GetTaskResponse](../../models/operations/GetTaskResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\GetTaskResponse](../../Models/Operations/GetTaskResponse.md)**
 
 
 ## listTasks
@@ -215,12 +215,12 @@ try {
 
 | Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\ListTasksRequest](../../models/operations/ListTasksRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| `$request`                                                                                                    | [\Contractify\ContractifyAPI\Models\Operations\ListTasksRequest](../../Models/Operations/ListTasksRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\ListTasksResponse](../../models/operations/ListTasksResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\ListTasksResponse](../../Models/Operations/ListTasksResponse.md)**
 
 
 ## updateTask
@@ -276,10 +276,10 @@ try {
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\UpdateTaskRequest](../../models/operations/UpdateTaskRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `$request`                                                                                                      | [\Contractify\ContractifyAPI\Models\Operations\UpdateTaskRequest](../../Models/Operations/UpdateTaskRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
 
-**[?\Contractify\ContractifyAPI\Models\Operations\UpdateTaskResponse](../../models/operations/UpdateTaskResponse.md)**
+**[?\Contractify\ContractifyAPI\Models\Operations\UpdateTaskResponse](../../Models/Operations/UpdateTaskResponse.md)**
 
