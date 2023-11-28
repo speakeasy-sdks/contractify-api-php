@@ -282,7 +282,6 @@ src/Models/Shared/UserCollection.php
 src/Models/Shared/Role.php
 src/Models/Shared/UserRead.php
 src/Models/Shared/Security.php
-USAGE.md
 docs/Models/Operations/ListContractTypesRequest.md
 docs/Models/Operations/ListContractTypesContractTypesResponseBody.md
 docs/Models/Operations/ListContractTypesResponseBody.md
@@ -547,4 +546,5 @@ docs/sdks/offices/README.md
 docs/sdks/relations/README.md
 docs/sdks/tasks/README.md
 docs/sdks/users/README.md
+USAGE.md
 .gitattributes
