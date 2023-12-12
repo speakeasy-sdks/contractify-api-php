@@ -10,8 +10,7 @@ use Contractify\ContractifyAPI\Models\Shared;
 use Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
 $sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)

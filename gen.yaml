@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 35b77c8e231012e142d527cdb5536b80
   docVersion: "2022-08-16"
-  speakeasyVersion: 1.123.0
-  generationVersion: 2.202.2
+  speakeasyVersion: 1.126.0
+  generationVersion: 2.213.3
 generation:
   comments: {}
   sdkClassName: ContractifyProduction
@@ -12,11 +12,11 @@ generation:
     optionalPropertyRendering: withExample
 features:
   php:
-    core: 3.1.2
-    globalSecurity: 2.81.1
+    core: 3.2.0
+    globalSecurity: 2.81.2
     globalServerURLs: 2.82.1
 php:
-  version: 0.2.3
+  version: 0.3.0
   imports:
     option: openapi
     paths:

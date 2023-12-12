@@ -22,16 +22,13 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListSubfoldersRequest();
-    $request->company = 749068;
+        $request = new Operations\ListSubfoldersRequest();
+    $request->company = 749068;;
 
     $response = $sdk->subfolders->listSubfolders($request);
 

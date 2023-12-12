@@ -26,18 +26,15 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateDepartmentRequest();
+        $request = new Operations\CreateDepartmentRequest();
     $request->departmentWrite = new Shared\DepartmentWrite();
     $request->departmentWrite->name = 'Sales';
-    $request->company = 33324;
+    $request->company = 33324;;
 
     $response = $sdk->departments->createDepartment($request);
 
@@ -78,17 +75,14 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteDepartmentRequest();
+        $request = new Operations\DeleteDepartmentRequest();
     $request->company = 701942;
-    $request->department = 751163;
+    $request->department = 751163;;
 
     $response = $sdk->departments->deleteDepartment($request);
 
@@ -129,17 +123,14 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetDepartmentRequest();
+        $request = new Operations\GetDepartmentRequest();
     $request->company = 255130;
-    $request->department = 855529;
+    $request->department = 855529;;
 
     $response = $sdk->departments->getDepartment($request);
 
@@ -180,16 +171,13 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListDepartmentsRequest();
-    $request->company = 117069;
+        $request = new Operations\ListDepartmentsRequest();
+    $request->company = 117069;;
 
     $response = $sdk->departments->listDepartments($request);
 
@@ -230,19 +218,16 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateDepartmentRequest();
+        $request = new Operations\UpdateDepartmentRequest();
     $request->departmentWrite = new Shared\DepartmentWrite();
     $request->departmentWrite->name = 'Sales';
     $request->company = 431122;
-    $request->department = 2342;
+    $request->department = 2342;;
 
     $response = $sdk->departments->updateDepartment($request);
 

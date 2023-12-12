@@ -26,15 +26,12 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateTaskRequest();
+        $request = new Operations\CreateTaskRequest();
     $request->taskWrite = new Shared\TaskWrite();
     $request->taskWrite->contractId = 1;
     $request->taskWrite->description = 'Lorem ipsum dolor sit amet.';
@@ -46,7 +43,7 @@ try {
     $request->taskWrite->repetitionInterval = 'P1Y';
     $request->taskWrite->status = Shared\TaskWriteStatus::Accomplished;
     $request->taskWrite->title = 'My task';
-    $request->company = 296904;
+    $request->company = 296904;;
 
     $response = $sdk->tasks->createTask($request);
 
@@ -87,17 +84,14 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteTaskRequest();
+        $request = new Operations\DeleteTaskRequest();
     $request->company = 357574;
-    $request->task = 394977;
+    $request->task = 394977;;
 
     $response = $sdk->tasks->deleteTask($request);
 
@@ -138,17 +132,14 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetTaskRequest();
+        $request = new Operations\GetTaskRequest();
     $request->company = 717011;
-    $request->task = 649018;
+    $request->task = 649018;;
 
     $response = $sdk->tasks->getTask($request);
 
@@ -189,17 +180,14 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListTasksRequest();
+        $request = new Operations\ListTasksRequest();
     $request->company = 715197;
-    $request->page = 192941;
+    $request->page = 192941;;
 
     $response = $sdk->tasks->listTasks($request);
 
@@ -240,15 +228,12 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateTaskRequest();
+        $request = new Operations\UpdateTaskRequest();
     $request->taskUpdate = new Shared\TaskUpdate();
     $request->taskUpdate->description = 'Lorem ipsum dolor sit amet.';
     $request->taskUpdate->dueDate = DateTime::createFromFormat('Y-m-d', '2021-12-31');
@@ -260,7 +245,7 @@ try {
     $request->taskUpdate->status = Shared\TaskUpdateStatus::Accomplished;
     $request->taskUpdate->title = 'My task';
     $request->company = 449699;
-    $request->task = 675064;
+    $request->task = 675064;;
 
     $response = $sdk->tasks->updateTask($request);
 

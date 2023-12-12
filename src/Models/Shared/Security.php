@@ -12,14 +12,14 @@ use \Contractify\ContractifyAPI\Utils\SpeakeasyMetadata;
 class Security
 {
 	#[SpeakeasyMetadata('security:scheme=true,type=oauth2,name=Authorization')]
-    public string $oAuth2;
+    public ?string $oAuth2 = null;
     
 	#[SpeakeasyMetadata('security:scheme=true,type=http,subtype=bearer,name=Authorization')]
-    public string $personalAccessToken;
+    public ?string $personalAccessToken = null;
     
 	public function __construct()
 	{
-		$this->oAuth2 = "";
-		$this->personalAccessToken = "";
+		$this->oAuth2 = null;
+		$this->personalAccessToken = null;
 	}
 }

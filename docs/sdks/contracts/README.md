@@ -26,15 +26,12 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateContractRequest();
+        $request = new Operations\CreateContractRequest();
     $request->contractWrite = new Shared\ContractWrite();
     $request->contractWrite->contractTypes = [
         940947,
@@ -74,7 +71,7 @@ try {
     $request->contractWrite->termination->isTerminableAtAnyTime = false;
     $request->contractWrite->termination->terminationDate = DateTime::createFromFormat('Y-m-d', '2021-11-30');
     $request->contractWrite->termination->terminationDuration = 'P1M';
-    $request->company = 410255;
+    $request->company = 410255;;
 
     $response = $sdk->contracts->createContract($request);
 
@@ -115,17 +112,14 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteContractRequest();
+        $request = new Operations\DeleteContractRequest();
     $request->company = 791005;
-    $request->contract = 200974;
+    $request->contract = 200974;;
 
     $response = $sdk->contracts->deleteContract($request);
 
@@ -166,17 +160,14 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetContractRequest();
+        $request = new Operations\GetContractRequest();
     $request->company = 362495;
-    $request->contract = 163842;
+    $request->contract = 163842;;
 
     $response = $sdk->contracts->getContract($request);
 
@@ -217,17 +208,14 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListContractsRequest();
+        $request = new Operations\ListContractsRequest();
     $request->company = 567515;
-    $request->page = 62076;
+    $request->page = 62076;;
 
     $response = $sdk->contracts->listContracts($request);
 
@@ -268,15 +256,12 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateContractRequest();
+        $request = new Operations\UpdateContractRequest();
     $request->contractWrite = new Shared\ContractWrite();
     $request->contractWrite->contractTypes = [
         60280,
@@ -317,7 +302,7 @@ try {
     $request->contractWrite->termination->terminationDate = DateTime::createFromFormat('Y-m-d', '2021-11-30');
     $request->contractWrite->termination->terminationDuration = 'P1M';
     $request->company = 693387;
-    $request->contract = 670029;
+    $request->contract = 670029;;
 
     $response = $sdk->contracts->updateContract($request);
 

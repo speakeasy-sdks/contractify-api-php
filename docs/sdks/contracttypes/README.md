@@ -22,16 +22,13 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListContractTypesRequest();
-    $request->company = 839467;
+        $request = new Operations\ListContractTypesRequest();
+    $request->company = 839467;;
 
     $response = $sdk->contractTypes->listContractTypes($request);
 

@@ -25,17 +25,14 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteDocumentRequest();
+        $request = new Operations\DeleteDocumentRequest();
     $request->company = 431806;
-    $request->document = 379848;
+    $request->document = 379848;;
 
     $response = $sdk->documents->deleteDocument($request);
 
@@ -76,17 +73,14 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetDocumentRequest();
+        $request = new Operations\GetDocumentRequest();
     $request->company = 67810;
-    $request->document = 267106;
+    $request->document = 267106;;
 
     $response = $sdk->documents->getDocument($request);
 
@@ -127,21 +121,18 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListDocumentsRequest();
+        $request = new Operations\ListDocumentsRequest();
     $request->company = 581480;
     $request->esigningStatus = Operations\EsigningStatus::LegalDeclined;
     $request->esigningUpdatedAfter = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-10T07:42:42.736Z');
     $request->page = 893340;
     $request->relationId = 873217;
-    $request->signedAfter = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-10T09:49:45.540Z');
+    $request->signedAfter = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-10T09:49:45.540Z');;
 
     $response = $sdk->documents->listDocuments($request);
 
@@ -182,15 +173,12 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateDocumentRequest();
+        $request = new Operations\UpdateDocumentRequest();
     $request->documentWrite = new Shared\DocumentWrite();
     $request->documentWrite->contracts = [
         1,
@@ -205,7 +193,7 @@ try {
     $request->documentWrite->name = 'filename.pdf';
     $request->documentWrite->ownerId = 1;
     $request->company = 653381;
-    $request->document = 312704;
+    $request->document = 312704;;
 
     $response = $sdk->documents->updateDocument($request);
 

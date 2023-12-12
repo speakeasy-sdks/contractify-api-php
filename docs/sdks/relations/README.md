@@ -26,15 +26,12 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateRelationRequest();
+        $request = new Operations\CreateRelationRequest();
     $request->relationWrite = new Shared\RelationWrite();
     $request->relationWrite->address = new Shared\Address();
     $request->relationWrite->address->addressLine1 = '221B Baker Street';
@@ -50,7 +47,7 @@ try {
     $request->relationWrite->reference = 'REF123';
     $request->relationWrite->vat = 'BE12345678';
     $request->relationWrite->website = 'https://www.example.org';
-    $request->company = 528070;
+    $request->company = 528070;;
 
     $response = $sdk->relations->createRelation($request);
 
@@ -91,17 +88,14 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteRelationRequest();
+        $request = new Operations\DeleteRelationRequest();
     $request->company = 773418;
-    $request->relation = 890630;
+    $request->relation = 890630;;
 
     $response = $sdk->relations->deleteRelation($request);
 
@@ -142,17 +136,14 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetRelationRequest();
+        $request = new Operations\GetRelationRequest();
     $request->company = 734058;
-    $request->relation = 979643;
+    $request->relation = 979643;;
 
     $response = $sdk->relations->getRelation($request);
 
@@ -193,18 +184,15 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListRelationsRequest();
+        $request = new Operations\ListRelationsRequest();
     $request->company = 454135;
     $request->page = 761434;
-    $request->reference = 'string';
+    $request->reference = 'string';;
 
     $response = $sdk->relations->listRelations($request);
 
@@ -245,15 +233,12 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateRelationRequest();
+        $request = new Operations\UpdateRelationRequest();
     $request->relationWrite = new Shared\RelationWrite();
     $request->relationWrite->address = new Shared\Address();
     $request->relationWrite->address->addressLine1 = '221B Baker Street';
@@ -270,7 +255,7 @@ try {
     $request->relationWrite->vat = 'BE12345678';
     $request->relationWrite->website = 'https://www.example.org';
     $request->company = 573397;
-    $request->relation = 281147;
+    $request->relation = 281147;;
 
     $response = $sdk->relations->updateRelation($request);
 

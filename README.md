@@ -58,8 +58,7 @@ use Contractify\ContractifyAPI\Models\Shared;
 use Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
 $sdk = ContractifyAPI\ContractifyProduction::builder()
     ->setSecurity($security)
@@ -152,6 +151,27 @@ try {
 * [currentUser](docs/sdks/users/README.md#currentuser) - Current User
 * [listUsers](docs/sdks/users/README.md#listusers) - List users
 <!-- End Available Resources and Operations [operations] -->
+
+<!-- Start Server Selection [server] -->
+## Server Selection
+
+## Server Selection
+
+### Select Server by Index
+
+You can override the default server globally by passing a server index to the `server_idx: int` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `https://app.contractify.be` | None |
+
+
+
+
+### Override Server URL Per-Client
+
+The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
+<!-- End Server Selection [server] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

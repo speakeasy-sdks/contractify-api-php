@@ -26,15 +26,12 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateOfficeRequest();
+        $request = new Operations\CreateOfficeRequest();
     $request->officeWrite = new Shared\OfficeWrite();
     $request->officeWrite->bus = '1';
     $request->officeWrite->city = 'Sleidinge';
@@ -47,7 +44,7 @@ try {
     $request->officeWrite->phone = '+32 9 234 28 97';
     $request->officeWrite->street = 'Polenstraat 163';
     $request->officeWrite->zip = '9940';
-    $request->company = 244393;
+    $request->company = 244393;;
 
     $response = $sdk->offices->createOffice($request);
 
@@ -88,17 +85,14 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteOfficeRequest();
+        $request = new Operations\DeleteOfficeRequest();
     $request->company = 327183;
-    $request->office = 668605;
+    $request->office = 668605;;
 
     $response = $sdk->offices->deleteOffice($request);
 
@@ -139,17 +133,14 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetOfficeRequest();
+        $request = new Operations\GetOfficeRequest();
     $request->company = 616050;
-    $request->office = 134885;
+    $request->office = 134885;;
 
     $response = $sdk->offices->getOffice($request);
 
@@ -190,16 +181,13 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListOfficesRequest();
-    $request->company = 303557;
+        $request = new Operations\ListOfficesRequest();
+    $request->company = 303557;;
 
     $response = $sdk->offices->listOffices($request);
 
@@ -240,15 +228,12 @@ use \Contractify\ContractifyAPI\Models\Shared;
 use \Contractify\ContractifyAPI\Models\Operations;
 
 $security = new Shared\Security();
-$security->oAuth2 = '';
-$security->personalAccessToken = '';
+$security->oAuth2 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = ContractifyAPI\ContractifyProduction::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ContractifyAPI\ContractifyProduction::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateOfficeRequest();
+        $request = new Operations\UpdateOfficeRequest();
     $request->officeWrite = new Shared\OfficeWrite();
     $request->officeWrite->bus = '1';
     $request->officeWrite->city = 'Sleidinge';
@@ -262,7 +247,7 @@ try {
     $request->officeWrite->street = 'Polenstraat 163';
     $request->officeWrite->zip = '9940';
     $request->company = 989026;
-    $request->office = 647378;
+    $request->office = 647378;;
 
     $response = $sdk->offices->updateOffice($request);
 
