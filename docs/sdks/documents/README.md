@@ -129,10 +129,10 @@ try {
         $request = new Operations\ListDocumentsRequest();
     $request->company = 581480;
     $request->esigningStatus = Operations\EsigningStatus::LegalDeclined;
-    $request->esigningUpdatedAfter = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-10T07:42:42.736Z');
+    $request->esigningUpdatedAfter = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-10T17:53:19.597Z');
     $request->page = 893340;
     $request->relationId = 873217;
-    $request->signedAfter = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-10T09:49:45.540Z');;
+    $request->signedAfter = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-10T12:00:29.363Z');;
 
     $response = $sdk->documents->listDocuments($request);
 
