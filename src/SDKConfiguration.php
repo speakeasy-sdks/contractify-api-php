@@ -18,8 +18,8 @@ class SDKConfiguration
 	public string $language = 'php';
 	public string $openapiDocVersion = '2022-08-16';
 	public string $sdkVersion = '0.3.1';
-	public string $genVersion = '2.223.3';
-	public string $userAgent = 'speakeasy-sdk/php 0.3.1 2.223.3 2022-08-16 contractify/contractify-api-php';
+	public string $genVersion = '2.225.2';
+	public string $userAgent = 'speakeasy-sdk/php 0.3.1 2.225.2 2022-08-16 contractify/contractify-api-php';
 	
 
 	public function getServerUrl(): string
