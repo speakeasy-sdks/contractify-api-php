@@ -1,0 +1,9 @@
+# TaskCollection
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `data`                                                                                       | array<[\Contractify\ContractifyAPI\Models\Shared\TaskRead](../../Models/Shared/TaskRead.md)> | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `meta`                                                                                       | [?\Contractify\ContractifyAPI\Models\Shared\Pagination](../../Models/Shared/Pagination.md)   | :heavy_minus_sign:                                                                           | N/A                                                                                          |

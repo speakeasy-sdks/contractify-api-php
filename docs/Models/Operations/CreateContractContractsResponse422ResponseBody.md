@@ -1,0 +1,11 @@
+# CreateContractContractsResponse422ResponseBody
+
+Invalid data posted
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      | Example                                                                                          |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `errors`                                                                                         | array<[\Contractify\ContractifyAPI\Models\Operations\Errors](../../Models/Operations/Errors.md)> | :heavy_minus_sign:                                                                               | N/A                                                                                              |                                                                                                  |
+| `message`                                                                                        | *?string*                                                                                        | :heavy_minus_sign:                                                                               | N/A                                                                                              | The given data was invalid.                                                                      |

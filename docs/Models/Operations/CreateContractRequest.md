@@ -1,0 +1,9 @@
+# CreateContractRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `contractWrite`                                                                                  | [?\Contractify\ContractifyAPI\Models\Shared\ContractWrite](../../Models/Shared/ContractWrite.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
+| `company`                                                                                        | *int*                                                                                            | :heavy_check_mark:                                                                               | Id of the company                                                                                |

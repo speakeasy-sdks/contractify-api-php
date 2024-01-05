@@ -1,0 +1,11 @@
+# DossierRead
+
+
+## Fields
+
+| Field                                                             | Type                                                              | Required                                                          | Description                                                       | Example                                                           |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `dossiertypeName`                                                 | *?string*                                                         | :heavy_minus_sign:                                                | N/A                                                               | IT                                                                |
+| `id`                                                              | *?int*                                                            | :heavy_minus_sign:                                                | N/A                                                               | 1                                                                 |
+| `name`                                                            | *?string*                                                         | :heavy_minus_sign:                                                | N/A                                                               | Software                                                          |
+| `permalink`                                                       | *?string*                                                         | :heavy_minus_sign:                                                | N/A                                                               | https://app.contractify.io/client/company/company-slug/dossiers/1 |

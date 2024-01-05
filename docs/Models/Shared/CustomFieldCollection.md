@@ -1,0 +1,9 @@
+# CustomFieldCollection
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `data`                                                                                                     | array<[\Contractify\ContractifyAPI\Models\Shared\CustomFieldRead](../../Models/Shared/CustomFieldRead.md)> | :heavy_minus_sign:                                                                                         | N/A                                                                                                        |
+| `meta`                                                                                                     | [?\Contractify\ContractifyAPI\Models\Shared\Pagination](../../Models/Shared/Pagination.md)                 | :heavy_minus_sign:                                                                                         | N/A                                                                                                        |

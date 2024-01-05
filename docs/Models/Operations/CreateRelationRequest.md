@@ -1,0 +1,9 @@
+# CreateRelationRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `relationWrite`                                                                                  | [?\Contractify\ContractifyAPI\Models\Shared\RelationWrite](../../Models/Shared/RelationWrite.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
+| `company`                                                                                        | *int*                                                                                            | :heavy_check_mark:                                                                               | Id of the company                                                                                |

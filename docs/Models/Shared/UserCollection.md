@@ -1,0 +1,9 @@
+# UserCollection
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `data`                                                                                       | array<[\Contractify\ContractifyAPI\Models\Shared\UserRead](../../Models/Shared/UserRead.md)> | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `meta`                                                                                       | [?\Contractify\ContractifyAPI\Models\Shared\Pagination](../../Models/Shared/Pagination.md)   | :heavy_minus_sign:                                                                           | N/A                                                                                          |
